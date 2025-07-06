@@ -31,6 +31,7 @@
 #include "robot_message.h"
 #include "bsp_usb.h"
 
+#include "pwm.h"
 #include "time.h"
 #include "moto.h"
 #include "MTMotoDriver.h"

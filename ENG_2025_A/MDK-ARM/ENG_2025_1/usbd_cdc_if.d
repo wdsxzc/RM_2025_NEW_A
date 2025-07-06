@@ -53,10 +53,10 @@ eng_2025_1/usbd_cdc_if.o: ..\USB_DEVICE\App\usbd_cdc_if.c \
   ..\ENG\UI\ui.h ..\ENG\UI\ui_interface.h ..\ENG\UI\ui_types.h \
   ..\ENG\UI\ui_g.h ..\USB_DEVICE\App\usbd_desc.h \
   ..\USB_DEVICE\App\usb_device.h ..\ENG\Inc\robot_message.h \
-  ..\ENG\Inc\bsp_usb.h ..\ENG\Inc\time.h ..\ENG\Inc\moto.h \
-  ..\ENG\Inc\MTMotoDriver.h ..\ENG\Inc\PID.h ..\ENG\Inc\bsp_can.h \
-  ..\ENG\Inc\bsp_uart.h ..\ENG\Inc\modes.h ..\ENG\Inc\RcDriver.h \
-  ..\ENG\Inc\Key.h ..\ENG\Inc\chassis.h ..\ENG\Inc\referee.h \
-  ..\ENG\Inc\wd.h ..\ENG\Inc\lift_moto_ctrl.h \
+  ..\ENG\Inc\bsp_usb.h ..\ENG\Inc\pwm.h ..\ENG\Inc\time.h \
+  ..\ENG\Inc\moto.h ..\ENG\Inc\MTMotoDriver.h ..\ENG\Inc\PID.h \
+  ..\ENG\Inc\bsp_can.h ..\ENG\Inc\bsp_uart.h ..\ENG\Inc\modes.h \
+  ..\ENG\Inc\RcDriver.h ..\ENG\Inc\Key.h ..\ENG\Inc\chassis.h \
+  ..\ENG\Inc\referee.h ..\ENG\Inc\wd.h ..\ENG\Inc\lift_moto_ctrl.h \
   ..\ENG\Inc\Arm_Whole_Ctrl.h ..\ENG\Inc\relay.h \
   ..\ENG\Inc\SelfCheck_Task.h

@@ -1,5 +1,4 @@
-eng_2025_1/mtmotodriver.o: ..\ENG\Src\MTMotoDriver.c \
-  ..\ENG\Inc\MTMotoDriver.h ..\ENG\Inc\Includes.h ..\Core\Inc\main.h \
+eng_2025_1/pwm.o: ..\ENG\Src\pwm.c ..\ENG\Inc\pwm.h ..\Core\Inc\main.h \
   ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal.h \
   ..\Core\Inc\stm32f4xx_hal_conf.h \
   ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_rcc.h \
@@ -28,8 +27,8 @@ eng_2025_1/mtmotodriver.o: ..\ENG\Src\MTMotoDriver.c \
   ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_pcd.h \
   ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_usb.h \
   ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_pcd_ex.h \
-  ..\Core\Inc\tim.h ..\Core\Inc\usart.h ..\Core\Inc\gpio.h \
-  ..\Core\Inc\can.h ..\Core\Inc\dma.h \
+  ..\ENG\Inc\Includes.h ..\Core\Inc\tim.h ..\Core\Inc\usart.h \
+  ..\Core\Inc\gpio.h ..\Core\Inc\can.h ..\Core\Inc\dma.h \
   ..\Middlewares\Third_Party\FreeRTOS\Source\include\FreeRTOS.h \
   ..\Core\Inc\FreeRTOSConfig.h \
   ..\Middlewares\Third_Party\FreeRTOS\Source\include\projdefs.h \
@@ -53,8 +52,8 @@ eng_2025_1/mtmotodriver.o: ..\ENG\Src\MTMotoDriver.c \
   ..\Middlewares\ST\STM32_USB_Device_Library\Core\Inc\usbd_core.h \
   ..\Middlewares\ST\STM32_USB_Device_Library\Core\Inc\usbd_ctlreq.h \
   ..\USB_DEVICE\App\usbd_desc.h ..\USB_DEVICE\App\usb_device.h \
-  ..\ENG\Inc\robot_message.h ..\ENG\Inc\bsp_usb.h ..\ENG\Inc\pwm.h \
-  ..\ENG\Inc\time.h ..\ENG\Inc\moto.h ..\ENG\Inc\PID.h \
+  ..\ENG\Inc\robot_message.h ..\ENG\Inc\bsp_usb.h ..\ENG\Inc\time.h \
+  ..\ENG\Inc\moto.h ..\ENG\Inc\MTMotoDriver.h ..\ENG\Inc\PID.h \
   ..\ENG\Inc\bsp_can.h ..\ENG\Inc\bsp_uart.h ..\ENG\Inc\modes.h \
   ..\ENG\Inc\RcDriver.h ..\ENG\Inc\Key.h ..\ENG\Inc\chassis.h \
   ..\ENG\Inc\referee.h ..\ENG\Inc\wd.h ..\ENG\Inc\lift_moto_ctrl.h \

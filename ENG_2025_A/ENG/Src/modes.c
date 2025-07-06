@@ -105,8 +105,8 @@ void ModeTask(void const *argument)
         }
 
         else if (RC_CtrlData.rc.sw1 == 1) {
-			if(RC_CtrlData.rc.sw2 == 3) tuchuan_pitch_angle = 28;
-			else if(RC_CtrlData.rc.sw2 == 2) tuchuan_pitch_angle = 5;
+			if(RC_CtrlData.rc.sw2 == 3) {tuchuan_pitch_angle = 28;CAMERA_PITCH = 1500 - 28/90*1000;}
+			else if(RC_CtrlData.rc.sw2 == 2) {tuchuan_pitch_angle = 5;CAMERA_PITCH = 1500 - 5/90*1000;}
 			
             Custom_Robot_Ctrl();
         }
@@ -114,6 +114,7 @@ void ModeTask(void const *argument)
         else
 		{
 			tuchuan_pitch_angle = 28;
+			CAMERA_PITCH = 1500 - 28/90*1000;
             frame.data.mode = 1;
 		}
 
@@ -225,9 +226,9 @@ void ModeTask(void const *argument)
             while (RC_CtrlData.mouse.press_l != 1) {
                 osDelay(1);
             }
-			CAMERA_LIFT = CAMERA_LIFT_MIN;
-			
+			CAMERA_LIFT = CAMERA_LIFT_MIN;			
 			tuchuan_pitch_angle = 0;
+			CAMERA_PITCH = 1500;
 			osDelay(500);
 			
             while (RC_CtrlData.mouse.press_l != 1) {
@@ -235,6 +236,7 @@ void ModeTask(void const *argument)
             }
 			
 			tuchuan_pitch_angle = -25;
+			CAMERA_PITCH = 1500 + 25/90*1000;
 			CAMERA_LIFT = CAMERA_LIFT_STD;
 		    Gold_To_DogHole_ing = 0;
 
@@ -248,7 +250,11 @@ void ModeTask(void const *argument)
 			
 			CAMERA_LIFT = CAMERA_LIFT_MIN;
 			tuchuan_pitch_angle = 0;
+			CAMERA_PITCH = 1500;
+			
 			tuchuan_yaw_angle = CAMERA_YAW_BACK;
+			CAMERA_YAW = CAMERA_YAW_MIN;
+			
 			t_UI = 2;
 			ui_remove_g_1();
 			vTaskDelay(10);
@@ -286,7 +292,11 @@ void ModeTask(void const *argument)
             }
 			
 			tuchuan_pitch_angle = -25;
+			CAMERA_PITCH = 1500 + 25/90*1000;
+			
 			tuchuan_yaw_angle = CAMERA_YAW_FORWARD;
+			CAMERA_YAW = CAMERA_YAW_MAX;
+			
 			CAMERA_LIFT = CAMERA_LIFT_STD;
 			t_UI = 1;
 			ui_remove_g_2();
@@ -316,6 +326,8 @@ void ModeTask(void const *argument)
 			CAMERA_LIFT = CAMERA_LIFT_MIN;
 			
 			tuchuan_pitch_angle = 0;
+			CAMERA_PITCH = 1500;
+			
 			osDelay(500);
 			
             while (RC_CtrlData.mouse.press_l != 1) {
@@ -323,6 +335,8 @@ void ModeTask(void const *argument)
             }
 			
 			tuchuan_pitch_angle = -25;
+			CAMERA_PITCH = 1500 + 25/90*1000;
+			
 			CAMERA_LIFT = CAMERA_LIFT_STD;
 		    To_DogHole_ing = 0;
 
@@ -335,8 +349,13 @@ void ModeTask(void const *argument)
 			To_DogHole_Gesture_Loop();
 			
 			CAMERA_LIFT = CAMERA_LIFT_MIN;
+			
 			tuchuan_pitch_angle = 0;
+			CAMERA_PITCH = 1500;
+			
 			tuchuan_yaw_angle = CAMERA_YAW_BACK;
+			CAMERA_YAW = CAMERA_YAW_MIN;
+			
 			t_UI = 2;
 			ui_remove_g_1();
 			vTaskDelay(10);
@@ -374,7 +393,11 @@ void ModeTask(void const *argument)
             }
 			
 			tuchuan_pitch_angle = -25;
+			CAMERA_PITCH = 1500 + 25/90*1000;
+			
 			tuchuan_yaw_angle = CAMERA_YAW_FORWARD;
+			CAMERA_YAW = CAMERA_YAW_MAX;
+			
 			CAMERA_LIFT = CAMERA_LIFT_STD;
 			t_UI = 1;
 			ui_remove_g_2();

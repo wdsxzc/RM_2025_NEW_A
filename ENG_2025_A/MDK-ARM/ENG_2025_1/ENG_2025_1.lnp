@@ -55,6 +55,7 @@
 "eng_2025_1\bsp_usb.o"
 "eng_2025_1\selfcheck_task.o"
 "eng_2025_1\bsp_uart.o"
+"eng_2025_1\pwm.o"
 "eng_2025_1\rcdriver.o"
 "eng_2025_1\moto.o"
 "eng_2025_1\chassis.o"

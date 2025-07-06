@@ -47,6 +47,7 @@ typedef struct __attribute__((packed)){
 	float pitch2;
 	float roll2;
 	uint8_t arm_enable_flag;// 机械臂使能标志位
+	uint8_t arm_camera;
 }FiveJointCtrlDataTD;//A板数据
 
 typedef struct __attribute__((packed)){

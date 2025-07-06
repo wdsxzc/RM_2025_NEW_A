@@ -103,10 +103,12 @@ int main(void)
   MX_USART1_UART_Init();
   MX_USART3_UART_Init();
   MX_USART6_UART_Init();
+  MX_TIM4_Init();
   /* USER CODE BEGIN 2 */
 	usb_init();
   can_filter_init();
 	__HAL_TIM_ENABLE(&htim2);
+	PWM_Start();
 //	wd_init();
   /* USER CODE END 2 */
 
