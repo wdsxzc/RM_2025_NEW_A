@@ -1,14 +1,12 @@
+/*
+无用，新版车已用舵机替代
+*/
 #ifndef __MTMOTODRIVER_H__
 #define __MTMOTODRIVER_H__
 #include "Includes.h"
 
 #define MT_MOTO_CAN_HANDEL hcan1
 
-#define TUCHUAN_PITCH (MTMotoState[0].angle_desired)
-#define TUCHUAN_YAW (MTMotoState[1].angle_desired)
-
-#define TUCHUAN_PITCH_READ (MTMotoState[0].angle)
-#define TUCHUAN_YAW_READ (MTMotoState[1].angle)
 
 // 脉塔电机
 typedef enum

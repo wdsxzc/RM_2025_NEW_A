@@ -46,8 +46,7 @@ extern bool camera_lift_inited;
 extern int16_t lift_moto_current_set[2];
 
 uint8_t lift_power_less_flag = 0;
-int32_t tuchuan_pitch_angle = 28;
-int32_t tuchuan_yaw_angle = CAMERA_YAW_FORWARD;
+int32_t Yaw_Flag = 1;
 
 extern uint8_t Eng_life;
 extern uint8_t last_Eng_life;
@@ -61,36 +60,12 @@ void LiftTask(void const *argument)
     osDelay(2);
     arm_lift_reset();
     for (;;) {
-
-        //if (lift_inited && camera_lift_inited) { // 确认已经触碰微动开关后
-//		if(last_Eng_life == 0 && Eng_life == 1)
-//		{
-//			SetMotoCurrent(&hcan2, Back, 0, 0, 0, 0);
-//            SetMotoCurrent(&hcan1, Back, 0, 0, 0, 0);
-//		}
-		
-//        else if(last_Eng_life == 1 && Eng_life == 1){
             Arm_Lift_Ctrl();
             Camera_Lift_Ctrl();
             SetMotoCurrent(&hcan2, Back, lift_moto_current_set[0], 0, 0, 0);
             osDelay(1);
             SetMotoCurrent(&hcan1, Back, 0, lift_moto_current_set[1], 0, 0);
             osDelay(1);
-//        }
-		
-		if(MTMotoState[0].angle < -180) MTMotoState[0].angle_desired = tuchuan_pitch_angle - 360;
-		else MTMotoState[0].angle_desired = tuchuan_pitch_angle;
-		
-		MTSetMotoPosition_single(MT_Motor1_can_ID, 120, (int32_t)(MTMotoState[0].angle_desired * 100));
-		osDelay(1);
-		
-		if(MTMotoState[1].angle < -180) MTMotoState[1].angle_desired = tuchuan_yaw_angle - 360;
-		else MTMotoState[1].angle_desired = tuchuan_yaw_angle;
-		
-		MTSetMotoPosition_single(MT_Motor2_can_ID, 180, (int32_t)(MTMotoState[1].angle_desired * 100));
-		osDelay(1);
-		
-        //}
     }
 }
 

@@ -100,14 +100,6 @@ void SaveMotoMsg(CAN_HandleTypeDef *hcan, uint32_t RxFifo)
 								device_time[CAN_M3508_BL] = 0;
                 UpdateMotoState(&moto_gimbal[1]);
                 break;
-			case (0x240 + MT_Motor1_can_ID):
-				device_time[CAN_RMD4015_pitch] = 0;
-				MTUpdateMotoState(&MTMotoState[0]);
-				break;
-			case (0x240 + MT_Motor2_can_ID):
-				device_time[CAN_RMD4015_yaw] = 0;
-				MTUpdateMotoState(&MTMotoState[1]);
-				break;		
 			
             default:
                 break;

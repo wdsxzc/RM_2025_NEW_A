@@ -32,7 +32,7 @@ void DEBUG_Loop(void)
 }
 
 extern int32_t tuchuan_pitch_angle;
-extern int32_t tuchuan_yaw_angle;
+extern int32_t Yaw_Flag;
 
 uint8_t Fetch_Two_Silver_ing = 0;
 uint8_t Fetch_Left_Silver_ing = 0;
@@ -105,20 +105,19 @@ void ModeTask(void const *argument)
         }
 
         else if (RC_CtrlData.rc.sw1 == 1) {
-			if(RC_CtrlData.rc.sw2 == 3) {tuchuan_pitch_angle = 28;CAMERA_PITCH = 1500 - 28/90*1000;}
-			else if(RC_CtrlData.rc.sw2 == 2) {tuchuan_pitch_angle = 5;CAMERA_PITCH = 1500 - 5/90*1000;}
+			if(RC_CtrlData.rc.sw2 == 3) CAMERA_PITCH = 1450 - 28/90*950;
+			else if(RC_CtrlData.rc.sw2 == 2) CAMERA_PITCH = 1450 - 5/90*950;
 			
             Custom_Robot_Ctrl();
         }
 
         else
 		{
-			tuchuan_pitch_angle = 28;
-			CAMERA_PITCH = 1500 - 28/90*1000;
+			CAMERA_PITCH = 1450 - 28/90*950;
             frame.data.mode = 1;
 		}
 
-		if(RC_CtrlData.rc.sw1 != 1)
+		if((RC_CtrlData.rc.sw1 != 1)&&(RC_CtrlData.rc.sw1 != 0))
 		{
 			if (RC_CtrlData.rc.sw2 == 1) arm_xipan_open();
 			if (RC_CtrlData.rc.sw2_last == 1 && RC_CtrlData.rc.sw2 == 3 && xipan_debug_flag == 0) 
@@ -227,16 +226,14 @@ void ModeTask(void const *argument)
                 osDelay(1);
             }
 			CAMERA_LIFT = CAMERA_LIFT_MIN;			
-			tuchuan_pitch_angle = 0;
-			CAMERA_PITCH = 1500;
+			CAMERA_PITCH = 1450;
 			osDelay(500);
 			
             while (RC_CtrlData.mouse.press_l != 1) {
                 osDelay(1);
             }
 			
-			tuchuan_pitch_angle = -25;
-			CAMERA_PITCH = 1500 + 25/90*1000;
+			CAMERA_PITCH = 1450 + 25/90*950;
 			CAMERA_LIFT = CAMERA_LIFT_STD;
 		    Gold_To_DogHole_ing = 0;
 
@@ -249,10 +246,9 @@ void ModeTask(void const *argument)
 			Fetch_Gold_To_DogHole_Gesture_Loop();
 			
 			CAMERA_LIFT = CAMERA_LIFT_MIN;
-			tuchuan_pitch_angle = 0;
-			CAMERA_PITCH = 1500;
+			CAMERA_PITCH = 1450;
 			
-			tuchuan_yaw_angle = CAMERA_YAW_BACK;
+			Yaw_Flag = 0;
 			CAMERA_YAW = CAMERA_YAW_MIN;
 			
 			t_UI = 2;
@@ -291,10 +287,9 @@ void ModeTask(void const *argument)
                 osDelay(1);
             }
 			
-			tuchuan_pitch_angle = -25;
-			CAMERA_PITCH = 1500 + 25/90*1000;
+			CAMERA_PITCH = 1450 + 25/90*950;
 			
-			tuchuan_yaw_angle = CAMERA_YAW_FORWARD;
+			Yaw_Flag = 1;
 			CAMERA_YAW = CAMERA_YAW_MAX;
 			
 			CAMERA_LIFT = CAMERA_LIFT_STD;
@@ -325,8 +320,7 @@ void ModeTask(void const *argument)
             }
 			CAMERA_LIFT = CAMERA_LIFT_MIN;
 			
-			tuchuan_pitch_angle = 0;
-			CAMERA_PITCH = 1500;
+			CAMERA_PITCH = 1450;
 			
 			osDelay(500);
 			
@@ -334,8 +328,7 @@ void ModeTask(void const *argument)
                 osDelay(1);
             }
 			
-			tuchuan_pitch_angle = -25;
-			CAMERA_PITCH = 1500 + 25/90*1000;
+			CAMERA_PITCH = 1450 + 25/90*950;
 			
 			CAMERA_LIFT = CAMERA_LIFT_STD;
 		    To_DogHole_ing = 0;
@@ -350,10 +343,9 @@ void ModeTask(void const *argument)
 			
 			CAMERA_LIFT = CAMERA_LIFT_MIN;
 			
-			tuchuan_pitch_angle = 0;
-			CAMERA_PITCH = 1500;
+			CAMERA_PITCH = 1450;
 			
-			tuchuan_yaw_angle = CAMERA_YAW_BACK;
+			Yaw_Flag = 0;
 			CAMERA_YAW = CAMERA_YAW_MIN;
 			
 			t_UI = 2;
@@ -392,10 +384,9 @@ void ModeTask(void const *argument)
                 osDelay(1);
             }
 			
-			tuchuan_pitch_angle = -25;
-			CAMERA_PITCH = 1500 + 25/90*1000;
+			CAMERA_PITCH = 1450 + 25/90*950;
 			
-			tuchuan_yaw_angle = CAMERA_YAW_FORWARD;
+			Yaw_Flag = 1;
 			CAMERA_YAW = CAMERA_YAW_MAX;
 			
 			CAMERA_LIFT = CAMERA_LIFT_STD;
@@ -471,24 +462,7 @@ void ModeTask(void const *argument)
 		//##################################################视觉兑矿##################################################
 		
         // 按下ctrl+e,进入视觉兑矿
-        if ((SHIJUE_mode_ing == 1)||(Key_Check_Hold(&Keys.KEY_CTRL) && Key_Check_Hold(&Keys.KEY_E))) {
-            ShiJue_mode();
-			SHIJUE_mode_ing = 0;
-        }
-		if ((SHIJUE_mode_arm == 1)||(Key_Check_Hold(&Keys.KEY_CTRL) && Key_Check_Hold(&Keys.KEY_W))) {
-			LIFT = -600000;
-            YAW1   = 0.0f;
-			YAW2   = 0.0f;
-			ROLL1  = 0.0f;
-			ROLL2  = 0.0f;
-			PITCH1 = 0.0f;
-			PITCH2 = 0.0f;
-			while (abs(LIFT - LIFT_READ) > LIFT_ERR_1 || fabsf(PITCH1 - PITCH1_READ) > DM_MOTO_ERR_1 || fabsf(YAW2 - YAW2_READ) > DM_MOTO_ERR_1 || fabsf(ROLL1 - ROLL1_READ) > DM_MOTO_ERR_1 || fabsf(PITCH2 - PITCH2_READ) > DM_MOTO_ERR_1) {
-					Break_While
-					osDelay(1);
-				}
-			SHIJUE_mode_arm = 0;
-        }
+		//再见了dingsang
 		
 		//##################################################视觉兑矿##################################################
 		
@@ -973,32 +947,4 @@ void To_DogHole_Gesture_Loop(void)
     }
 }
 
-//视觉兑矿
-void ShiJue_mode()
-{
-	for(int i=0;i<=action_Num;i++)
-	{
-		if(nuc_receive_data.action_data[i].len > 0.11)
-		{ 
-			uint16_t tt = 0;
-			LIFT 	 = nuc_receive_data.action_data[i].len / 0.43f * (-1299000.0f) - 1000.0f;
-			YAW1   = nuc_receive_data.action_data[i].yaw1;
-			PITCH1 = nuc_receive_data.action_data[i].pitch1 * (-1.0f) ;
-			YAW2   = nuc_receive_data.action_data[i].yaw2 * (-1.0f) ;
-			if(nuc_receive_data.action_data[i].roll1>45) ROLL1 = nuc_receive_data.action_data[i].roll1 - 360.0f;
-			else if(nuc_receive_data.action_data[i].roll1<-315) ROLL1 = nuc_receive_data.action_data[i].roll1 + 360.0f;
-			else ROLL1  = nuc_receive_data.action_data[i].roll1;
-			PITCH2 = nuc_receive_data.action_data[i].pitch2;
-			ROLL2  = nuc_receive_data.action_data[i].roll2 + set_error_roll;
-			while (abs(LIFT - LIFT_READ) > LIFT_ERR_1 || fabsf(PITCH1 - PITCH1_READ) > DM_MOTO_ERR_1 || fabsf(YAW2 - YAW2_READ) > DM_MOTO_ERR_1 || fabsf(ROLL1 - ROLL1_READ) > DM_MOTO_ERR_1 || fabsf(PITCH2 - PITCH2_READ) > DM_MOTO_ERR_1) {
-					Break_While
-					tt++;
-					if(tt == 300) break;
-					osDelay(1);
-				}
-		}
-	}
-	memset(&nuc_receive_data, 0, sizeof(nuc_receive_data_t));
-	action_Num = 0;
-	t_shijue = 0;
-}
+

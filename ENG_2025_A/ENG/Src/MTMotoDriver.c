@@ -1,7 +1,10 @@
+/*
+无用，新版车已用舵机替代
+*/
+
 #include "MTMotoDriver.h"
 
 extern uint8_t rx_data[8]; // FIFO接收缓存区
-MTMotoStateTD MTMotoState[2];
 
 // 参数1：canID
 // 参数2：电流控制值(0.01A/LSB)

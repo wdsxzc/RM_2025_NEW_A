@@ -49,7 +49,7 @@ void gimbal_pid_init(void)
     }
 }
 
-extern int32_t tuchuan_yaw_angle;
+extern int32_t Yaw_Flag;
 
 // 遥控器控制
 void chassis_control_RC(void)
@@ -75,7 +75,7 @@ void chassis_control_RC(void)
 //	else if(RC_CtrlData.rc.sw1 == 3) chassis_speed_coefficient = 1;
 //	else if(RC_CtrlData.rc.sw1 == 3) chassis_speed_coefficient = 1;
 	
-	if(tuchuan_yaw_angle == CAMERA_YAW_FORWARD)
+	if(Yaw_Flag == CAMERA_YAW_FORWARD)
 	{
 		moto_chassis[0].speed_desired = (-vy + vx + vr) * chassis_speed_coefficient; // 1  right front
 		moto_chassis[1].speed_desired = (vy + vx + vr) * chassis_speed_coefficient;  // 2  left front
@@ -83,7 +83,7 @@ void chassis_control_RC(void)
 		moto_chassis[3].speed_desired = (-vy - vx + vr) * chassis_speed_coefficient; // 4	right back
 	}
 	
-	else if(tuchuan_yaw_angle == CAMERA_YAW_BACK)
+	else if(Yaw_Flag == CAMERA_YAW_BACK)
 	{
 		vx = -vx;
 		vy = -vy;

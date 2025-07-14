@@ -30,8 +30,8 @@
 #define CAMERA_LIFT_MIN   (5000)
 #define CAMERA_LIFT_STD   (360000)
 
-#define CAMERA_YAW_FORWARD 89
-#define CAMERA_YAW_BACK -91
+#define CAMERA_YAW_FORWARD 1
+#define CAMERA_YAW_BACK 0
 
 //----------------------------------------------
 
