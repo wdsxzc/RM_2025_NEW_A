@@ -26,17 +26,17 @@ void TransmitTask(void const *argument)
 
 void usb_task(void *argument)
 {
-	cmd_id_init();
-	cmd_id_task_create(0x14,999);
+//	cmd_id_init();
+//	cmd_id_task_create(0x14,999);
 	while(1)
 	{
 //		Nuc_data_unpacked();
-		if(ShiJue_mode_ctrl) 
-		{
-			memset(&nuc_receive_data, 0, sizeof(nuc_receive_data_t));
-			action_Num = 0;
-		}
-		cmd_id_queue_handle();
+//		if(ShiJue_mode_ctrl) 
+//		{
+//			memset(&nuc_receive_data, 0, sizeof(nuc_receive_data_t));
+//			action_Num = 0;
+//		}
+//		cmd_id_queue_handle();
 		osDelay(100);
 	}
 }
@@ -69,7 +69,6 @@ void LiftTask(void const *argument)
     }
 }
 
-// extern int16_t chassis_speed_coefficient;
 
 //void Arm_Ctrl_Task(void *argument)
 //{

@@ -3,10 +3,8 @@
 PoseMode posemod;
 PoseMode last_posemod;
 extern frame_t frame;
-extern nuc_receive_data_t	nuc_receive_data;
 extern int action_Num;
 extern uint8_t t_UI;
-extern uint8_t t_shijue;
 int set_error_roll = 15;
 uint8_t t_r = 0;
 
@@ -42,6 +40,7 @@ uint8_t Before_Exchange_Below_Silver_ing = 0;
 uint8_t Fetch_Ground_ing = 0;
 uint8_t Fetch_Gold_ing = 0;
 uint8_t Gold_To_Storage_ing = 0;
+uint8_t Gold_To_ing = 0;
 uint8_t Gold_To_DogHole_ing = 0;
 uint8_t Gold_To_DogHole_Back_ing = 0;
 uint8_t To_DogHole_ing = 0;
@@ -185,16 +184,16 @@ void ModeTask(void const *argument)
 		
 		//###################################################取金矿###################################################
 		// 按下A,进入一键金模式
-        if ((Key_Check_Hold(&Keys.KEY_CTRL) && Key_Check_Hold(&Keys.KEY_A)) || Gold_To_Storage_ing == 1) {
-            Gold_To_Storage_ing = 1;
+        if ((Key_Check_Hold(&Keys.KEY_CTRL) && Key_Check_Hold(&Keys.KEY_A)) || Gold_To_ing == 1) {
+            Gold_To_ing = 1;
             Before_Fetch_Gold_Loop();
 			
             while (RC_CtrlData.mouse.press_l != 1) {
                 osDelay(1);
             }
 			
-			LIFT = LIFT - 140000;
-			PITCH2 = -20;
+			LIFT = LIFT - 130000;
+			PITCH2 = -2.0f;
 			osDelay(500);
 			
             while (RC_CtrlData.mouse.press_l != 1) {
@@ -202,7 +201,7 @@ void ModeTask(void const *argument)
                 osDelay(1);
             }
 			
-			Gold_To_Storage_ing = 0;
+			Gold_To_ing = 0;
         }
 				
 		// 按下S,将矿放入矿仓
@@ -555,11 +554,13 @@ void Fetch_Silver_To_Storage_Loop(void)
 		Break_While
     }
 	
-	YAW1   = -63.0f;
-    PITCH1 = 0.0f;
-    YAW2   = -46.0f;
+	YAW1   = -51.91f;
+    PITCH1 = -0.440f;
+    YAW2   = -37.518f;
     ROLL1  = -90.0f;
-    PITCH2 = 90.0f;
+    PITCH2 = 88.890f;
+	
+	
     ROLL2  = -40.0f;
 	
 	while (fabsf(PITCH1 - PITCH1_READ) > DM_MOTO_ERR || fabsf(YAW1 - YAW1_READ) > DM_MOTO_ERR || fabsf(YAW2 - YAW2_READ) > DM_MOTO_ERR || fabsf(ROLL1 - ROLL1_READ) > DM_MOTO_ERR) {
@@ -709,16 +710,16 @@ void Before_Exchange_Below_Silver_Loop(void)
 			Break_While
 	}
 	
-    LIFT = -110000;
+    LIFT = -100000;
     while (abs(LIFT - LIFT_READ) > LIFT_ERR) {
         osDelay(1);
 			Break_While
 	}
 
-	YAW1   = -30.0f;
+	YAW1   = -10.0f;
     PITCH1 = 0.0f;
-    YAW2   = -55.65f;
-    ROLL1  = -73.0f;
+    YAW2   = -48.0f;
+    ROLL1  = -120.0f;
     PITCH2 = 27.0f;
 
 	arm_xipan_open();
@@ -728,19 +729,24 @@ void Before_Exchange_Below_Silver_Loop(void)
 		Break_While
 	}
 	
-	PITCH1 = -24.49f;
+	PITCH1 = -24.0f;
     while (fabsf(PITCH1 - PITCH1_READ) > DM_MOTO_ERR) {
         osDelay(1);
 			Break_While
 	}
-	
-	osDelay(150);
-	YAW1   = -43.25f;
+	YAW1 = -24.0f;
     while (fabsf(YAW1 - YAW1_READ) > DM_MOTO_ERR) {
         osDelay(1);
 			Break_While
-    }
-	osDelay(100);
+	}
+	
+	osDelay(500);
+//	YAW1   = -43.25f;
+//    while (fabsf(YAW1 - YAW1_READ) > DM_MOTO_ERR) {
+//        osDelay(1);
+//			Break_While
+//    }
+//	osDelay(100);
 	
 	LIFT -= 350000;
     while (abs(LIFT - LIFT_READ) > LIFT_ERR) {
@@ -750,18 +756,22 @@ void Before_Exchange_Below_Silver_Loop(void)
 	
 
 	LIFT -= 600000;
-	YAW1   = 0.0f;
 	PITCH1 = -10.0f;
-    YAW2   = 0.0f;
     ROLL1  = -90.0f;
     PITCH2 = 70.0f;
 	ROLL2 -= 90;
 	
-    while (abs(LIFT - LIFT_READ) > LIFT_ERR || fabsf(YAW1 - YAW1_READ) > DM_MOTO_ERR || fabsf(PITCH1 - PITCH1_READ) > DM_MOTO_ERR  || fabsf(YAW2 - YAW2_READ) > DM_MOTO_ERR || fabsf(ROLL1 - ROLL1_READ) > DM_MOTO_ERR) {
+    while (abs(LIFT - LIFT_READ) > LIFT_ERR || fabsf(PITCH1 - PITCH1_READ) > DM_MOTO_ERR  || fabsf(ROLL1 - ROLL1_READ) > DM_MOTO_ERR) {
         osDelay(1);
 		Break_While
 	}
 	
+	YAW1   = 0.0f;
+	YAW2   = 0.0f;
+	while (fabsf(YAW1 - YAW1_READ) > DM_MOTO_ERR || fabsf(YAW2 - YAW2_READ) > DM_MOTO_ERR) {
+        osDelay(1);
+		Break_While
+	}
 }
 
 // ########################################地矿########################################
@@ -840,7 +850,7 @@ void Before_Fetch_Gold_Loop(void)
 		Break_While
     }
 	
-    LIFT = -30000;
+    LIFT = -20000;
     while (abs(LIFT - LIFT_READ) > LIFT_ERR) {
         osDelay(1);
 			Break_While
@@ -865,11 +875,13 @@ void Fetch_Gold_To_Storage_Loop(void)
 			Break_While
 		}
 	
-	YAW1   = -63.0f;
-    PITCH1 = 0.0f;
-    YAW2   = -46.0f;
+    ROLL2  += 98.0f;
+
+	YAW1   = -51.91f;
+    PITCH1 = -0.440f;
+    YAW2   = -37.518f;
     ROLL1  = -90.0f;
-    ROLL2  += 68.0f;
+    PITCH2 = 88.890f;
 	
 	while (fabsf(PITCH1 - PITCH1_READ) > DM_MOTO_ERR || fabsf(YAW1 - YAW1_READ) > DM_MOTO_ERR || fabsf(YAW2 - YAW2_READ) > DM_MOTO_ERR || fabsf(ROLL1 - ROLL1_READ) > DM_MOTO_ERR) {
         osDelay(1);
