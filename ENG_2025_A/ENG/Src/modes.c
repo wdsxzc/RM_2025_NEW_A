@@ -29,7 +29,11 @@ void DEBUG_Loop(void)
     */
 }
 
-extern int32_t tuchuan_pitch_angle;
+extern uint16_t camera_pitch;
+extern uint16_t camera_yaw;
+extern uint16_t t_ts1;
+extern uint16_t t_ts2;
+
 extern int32_t Yaw_Flag;
 
 uint8_t Fetch_Two_Silver_ing = 0;
@@ -60,7 +64,7 @@ void ModeTask(void const *argument)
 		if((RC_CtrlData.rc.sw2 == 3)&&(t_r == 0))
 		{
 			t_r = 1;
-			sync_data_to_c.data.yaw1   = 0.0f;
+			sync_data_to_c.data.yaw1   = -10.0f;
 			sync_data_to_c.data.pitch1 = -19.0f;
 			sync_data_to_c.data.yaw2   = -18.0f;
 			sync_data_to_c.data.roll1  = -180.0f;
@@ -68,9 +72,12 @@ void ModeTask(void const *argument)
 			sync_data_to_c.data.roll2  = 0.0f;
 		}
 
-        if (RC_CtrlData.rc.sw1 == 3) {
+        if (RC_CtrlData.rc.sw1 == 3) 
+		{
             Robot_Custom_Ctrl();
-			
+			sync_data_to_c.data.arm_camera = 0;
+			CAMERA_PITCH = 1770;
+			t_ts1 = 1;
 			if(Key_Check_Hold(&Keys.KEY_CTRL) && (RC_CtrlData.mouse.press_l == 1))
 			{
 				osDelay(20);
@@ -103,16 +110,31 @@ void ModeTask(void const *argument)
 			
         }
 
-        else if (RC_CtrlData.rc.sw1 == 1) {
-			if(RC_CtrlData.rc.sw2 == 3) CAMERA_PITCH = 1450 - 28/90*950;
-			else if(RC_CtrlData.rc.sw2 == 2) CAMERA_PITCH = 1450 - 5/90*950;
-			
+        else if (RC_CtrlData.rc.sw1 == 1) 
+		{
+			if(RC_CtrlData.rc.sw2 == 1) 
+			{
+				sync_data_to_c.data.arm_camera = 0;
+				CAMERA_PITCH = 1770;
+			}
+			if(RC_CtrlData.rc.sw2 == 3) 
+			{
+				sync_data_to_c.data.arm_camera = 0;
+				CAMERA_PITCH = 1550;
+			}
+			else if(RC_CtrlData.rc.sw2 == 2) 
+			{
+				sync_data_to_c.data.arm_camera = 1;
+				CAMERA_PITCH = 2450;
+			}
             Custom_Robot_Ctrl();
         }
 
         else
 		{
-			CAMERA_PITCH = 1450 - 28/90*950;
+			t_ts1 = 0;
+			CAMERA_PITCH = 1770;
+			sync_data_to_c.data.arm_camera = 0;
             frame.data.mode = 1;
 		}
 
@@ -192,7 +214,7 @@ void ModeTask(void const *argument)
                 osDelay(1);
             }
 			
-			LIFT = LIFT - 130000;
+			LIFT = LIFT - 150000;
 			PITCH2 = -2.0f;
 			osDelay(500);
 			
@@ -327,7 +349,7 @@ void ModeTask(void const *argument)
                 osDelay(1);
             }
 			
-			CAMERA_PITCH = 1450 + 25/90*950;
+			CAMERA_PITCH = 1450;
 			
 			CAMERA_LIFT = CAMERA_LIFT_STD;
 		    To_DogHole_ing = 0;
@@ -455,7 +477,7 @@ void ModeTask(void const *argument)
         }
 		
 		//###################################################兑银矿###################################################
-		
+
 				
 				
 		//##################################################视觉兑矿##################################################
@@ -484,8 +506,8 @@ void Before_Fetch_Right_Silver_Loop(void)
 			Break_While
     }
 
-    YAW1   = -34.32f;
-    YAW2   = 143.5f;
+    YAW1   = -38.0f;
+    YAW2   = 145.0f;
     ROLL1  = -109.0f;
     PITCH2 = 75.0f;
     while (fabsf(YAW1 - YAW1_READ) > DM_MOTO_ERR || fabsf(YAW2 - YAW2_READ) > DM_MOTO_ERR || fabsf(ROLL1 - ROLL1_READ) > DM_MOTO_ERR) {
@@ -506,15 +528,16 @@ void Before_Fetch_Left_Silver_Loop(void)
 {
 	ROLL2 = 0;
     LIFT = LIFT_SILVER_UP;
-    while (abs(LIFT - LIFT_READ) > LIFT_ERR) {
+	PITCH1 = 10.0f;
+    while (abs(LIFT - LIFT_READ) > LIFT_ERR || fabsf(PITCH1 - PITCH1_READ) > DM_MOTO_ERR) {
         osDelay(1);
 			Break_While
     }
 	
-    YAW1   = 34.32f;
-    YAW2   = 36.5f;
-    ROLL1  = -71.0f;
-    PITCH2 = 68.24f;
+    YAW1   = 38.0f;
+    YAW2   = 35.0f;
+    ROLL1  = -70.0f;
+    PITCH2 = 72.0f;
 
     while (fabsf(YAW1 - YAW1_READ) > DM_MOTO_ERR || fabsf(YAW2 - YAW2_READ) > DM_MOTO_ERR || fabsf(ROLL1 - ROLL1_READ) > DM_MOTO_ERR) {
         osDelay(1);
@@ -561,14 +584,14 @@ void Fetch_Silver_To_Storage_Loop(void)
     PITCH2 = 88.890f;
 	
 	
-    ROLL2  = -40.0f;
+    ROLL2  += 23.0f;
 	
 	while (fabsf(PITCH1 - PITCH1_READ) > DM_MOTO_ERR || fabsf(YAW1 - YAW1_READ) > DM_MOTO_ERR || fabsf(YAW2 - YAW2_READ) > DM_MOTO_ERR || fabsf(ROLL1 - ROLL1_READ) > DM_MOTO_ERR) {
         osDelay(1);
 		Break_While
     }
 	
-	LIFT = -460000;
+	LIFT = -550000;
     while (abs(LIFT - LIFT_READ) > LIFT_ERR) {
         osDelay(1);
 			Break_While
@@ -576,9 +599,9 @@ void Fetch_Silver_To_Storage_Loop(void)
 	
 	osDelay(100);
     arm_xipan_close();
-	osDelay(1000);
+	osDelay(1500);
 	
-    LIFT -= 100000;
+    LIFT -= 250000;
     while (abs(LIFT - LIFT_READ) > LIFT_ERR) {
         osDelay(1);
 			Break_While
@@ -604,19 +627,19 @@ void Fetch_Silver_OnTheOther_Silver_Loop(void)
 			Break_While
     }
 	
-	YAW1   = -41.0f;
+	YAW1   = -21.47f;
     PITCH1 = 0.0f;
-    YAW2   = -50.0f;
-    ROLL1  = -90.0f;
-    PITCH2 = 0.0f;
-	ROLL2  = 5.0f;
+    YAW2   = -40.63f;
+    ROLL1  = -172.0f;
+    PITCH2 = 34.47f;
+	ROLL2  = -10.0f;
 	
     while (fabsf(PITCH1 - PITCH1_READ) > DM_MOTO_ERR || fabsf(YAW1 - YAW1_READ) > DM_MOTO_ERR || fabsf(YAW2 - YAW2_READ) > DM_MOTO_ERR || fabsf(ROLL1 - ROLL1_READ) > DM_MOTO_ERR) {
         osDelay(1);
 		Break_While
 	}
 	
-    LIFT = -600000;
+    LIFT = -540000;
 	
     while (abs(LIFT - LIFT_READ) > LIFT_ERR) {
         osDelay(1);
@@ -629,21 +652,21 @@ void Fetch_Silver_OnTheOther_Silver_Loop(void)
 void Before_Exchange_Above_Silver_Loop(void)
 {
     arm_xipan_close();
-	osDelay(1200);
+	osDelay(2000);
 	
-	YAW1   = -15.0f;
+	YAW1   = -5.47f;
     PITCH1 = 0.0f;
-    YAW2   = -57.0f;
-    ROLL1  = -90.0f;
-    PITCH2 = 0.0f;
-	ROLL2  = 0.0f;
+    YAW2   = -40.63f;
+    ROLL1  = -172.0f;
+    PITCH2 = 34.47f;
+	ROLL2  = -10.0f;
 
     while (fabsf(PITCH1 - PITCH1_READ) > DM_MOTO_ERR || fabsf(YAW1 - YAW1_READ) > DM_MOTO_ERR || fabsf(YAW2 - YAW2_READ) > DM_MOTO_ERR || fabsf(ROLL1 - ROLL1_READ) > DM_MOTO_ERR) {
         osDelay(1);
 		Break_While
 	}
 
-    LIFT = -950000;
+    LIFT = -1090000;
 
     while (abs(LIFT - LIFT_READ) > LIFT_ERR) {
         osDelay(1);
@@ -652,10 +675,10 @@ void Before_Exchange_Above_Silver_Loop(void)
 	
 	arm_xipan_open();
 
-	YAW1   = -70.0f;
-    PITCH1 = 8.0f;
-    YAW2   = -45.0f;
-    ROLL1  = -90.0f;
+	YAW1   = -60.5f;
+    PITCH1 = 0.0f;
+    YAW2   = -43.94f;
+    ROLL1  = -88.0f;
     PITCH2 = 90.0f;
 	
     while (fabsf(YAW1 - YAW1_READ) > DM_MOTO_ERR || fabsf(PITCH1 - PITCH1_READ) > DM_MOTO_ERR  || fabsf(YAW2 - YAW2_READ) > DM_MOTO_ERR || fabsf(ROLL1 - ROLL1_READ) > DM_MOTO_ERR) {
@@ -663,14 +686,14 @@ void Before_Exchange_Above_Silver_Loop(void)
 		Break_While
 	}
 	
-    LIFT += 250000;
+    LIFT += 300000;
 	
     while (abs(LIFT - LIFT_READ) > LIFT_ERR) {
         osDelay(1);
 			Break_While
     }
 	
-    LIFT -= 250000;
+    LIFT -= 300000;
 	
     while (abs(LIFT - LIFT_READ) > LIFT_ERR) {
         osDelay(1);
@@ -682,7 +705,7 @@ void Before_Exchange_Above_Silver_Loop(void)
     YAW2   = 0.0f;
     ROLL1  = -90.0f;
     PITCH2 = 70.0f;
-	ROLL2 += 180;
+	ROLL2 += 0;
 	
     while (fabsf(YAW1 - YAW1_READ) > DM_MOTO_ERR || fabsf(PITCH1 - PITCH1_READ) > DM_MOTO_ERR  || fabsf(YAW2 - YAW2_READ) > DM_MOTO_ERR || fabsf(ROLL1 - ROLL1_READ) > DM_MOTO_ERR) {
         osDelay(1);
@@ -705,6 +728,7 @@ void Before_Exchange_Below_Silver_Loop(void)
 	osDelay(200);
 	
     YAW1 = 0.0f;
+	ROLL2 = 0;
     while (fabsf(YAW1 - YAW1_READ) > DM_MOTO_ERR) {
         osDelay(1);
 			Break_While
@@ -748,18 +772,18 @@ void Before_Exchange_Below_Silver_Loop(void)
 //    }
 //	osDelay(100);
 	
-	LIFT -= 350000;
+	LIFT -= 500000;
     while (abs(LIFT - LIFT_READ) > LIFT_ERR) {
         osDelay(1);
 			Break_While
     }
 	
 
-	LIFT -= 600000;
+	LIFT -= 450000;
 	PITCH1 = -10.0f;
     ROLL1  = -90.0f;
     PITCH2 = 70.0f;
-	ROLL2 -= 90;
+	ROLL2 -= 60;
 	
     while (abs(LIFT - LIFT_READ) > LIFT_ERR || fabsf(PITCH1 - PITCH1_READ) > DM_MOTO_ERR  || fabsf(ROLL1 - ROLL1_READ) > DM_MOTO_ERR) {
         osDelay(1);
@@ -864,22 +888,16 @@ void Before_Fetch_Gold_Loop(void)
 void Fetch_Gold_To_Storage_Loop(void)
 {
     LIFT = -750000;
+	PITCH2 = 90.0f;
     while (abs(LIFT - LIFT_READ) > LIFT_ERR) {
         osDelay(1);
 			Break_While
     }
-		PITCH2 = 90.0f;
-		while (fabsf(PITCH2 - PITCH2_READ) > DM_MOTO_ERR)
-		{
-			osDelay(1);
-			Break_While
-		}
 	
-    ROLL2  += 98.0f;
-
-	YAW1   = -51.91f;
-    PITCH1 = -0.440f;
-    YAW2   = -37.518f;
+    ROLL2  += 87.0f;
+	YAW1   = -54.91f;
+    PITCH1 = 0.0f;
+    YAW2   = -39.0f;
     ROLL1  = -90.0f;
     PITCH2 = 88.890f;
 	
@@ -888,7 +906,7 @@ void Fetch_Gold_To_Storage_Loop(void)
 				Break_While
     }
 	
-	LIFT = -460000;
+	LIFT = -520000;
     while (abs(LIFT - LIFT_READ) > LIFT_ERR) {
         osDelay(1);
 			Break_While
@@ -898,7 +916,7 @@ void Fetch_Gold_To_Storage_Loop(void)
     arm_xipan_close();
 	osDelay(1000);
 	
-    LIFT -= 100000;
+    LIFT -= 180000;
     while (abs(LIFT - LIFT_READ) > LIFT_ERR) {
         osDelay(1);
 			Break_While
@@ -911,10 +929,10 @@ void Fetch_Gold_To_DogHole_Gesture_Loop(void)
 {
 	
 	LIFT = -50000;
-	YAW1   = 0.0f;
+	YAW1   = 3.0f;
     PITCH1 = 0.0f;
-    YAW2   = -10.0f;
-    ROLL1  = -145.0f;
+    YAW2   = 0.0f;
+    ROLL1  = -175.0f;
     PITCH2 = 90.0f;
 	ROLL2 += 0;
 		
@@ -923,7 +941,7 @@ void Fetch_Gold_To_DogHole_Gesture_Loop(void)
 	Break_While
     }
 	
-    PITCH1 = -19.0f;
+    PITCH1 = -25.0f;
 	while (fabsf(PITCH1 - PITCH1_READ) > DM_MOTO_ERR){
         osDelay(1);
 		Break_While
@@ -940,8 +958,8 @@ void To_DogHole_Gesture_Loop(void)
 	Break_While
     }
 	
-	YAW1   = -70.0f;
-    YAW2   = -45.0f;
+	YAW1   = -65.0f;
+    YAW2   = -30.0f;
     ROLL1  = -145.0f;
     PITCH2 = 90.0f;
 	ROLL2 += 0;

@@ -1,7 +1,6 @@
 #ifndef __PWM_H
 #define __PWM_H
 #include "main.h"
-#include "Includes.h"
 
 #define CAMERA_YAW_MAX 2450
 #define CAMERA_YAW_MIN 550
@@ -16,5 +15,8 @@
 #define CAMERA_YAW TIM4->CCR1
 
 void PWM_Start(void);
+void Camera_Pitch_Set(void);
+void Camera_Yaw_Set(void);
+
 
 #endif

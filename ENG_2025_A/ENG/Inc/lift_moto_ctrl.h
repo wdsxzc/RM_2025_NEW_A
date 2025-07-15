@@ -27,7 +27,7 @@
 
 #define CAMERA_LIFT       (moto_gimbal[1].angle_desired)
 #define CAMERA_LIFT_MAX   (400000)
-#define CAMERA_LIFT_MIN   (5000)
+#define CAMERA_LIFT_MIN   (10000)
 #define CAMERA_LIFT_STD   (360000)
 
 #define CAMERA_YAW_FORWARD 1

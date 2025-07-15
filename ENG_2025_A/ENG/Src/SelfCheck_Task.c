@@ -26,6 +26,11 @@ uint8_t Eng_life=0;
 uint8_t last_Eng_life=1;
 extern uint8_t camera_lift_reset_flag;
 extern uint8_t arm_lift_reset_flag;
+extern uint16_t camera_pitch;
+extern uint16_t camera_yaw;
+uint16_t t_ts1;
+uint16_t t_ts2;
+
 
 void SelfCheck_mode(void const *argument)
 {
@@ -84,11 +89,15 @@ void SelfCheck_mode(void const *argument)
 		{
 			CAMERA_LIFT = CAMERA_LIFT + 600;
 		}
-		if (Key_Check_Hold(&Keys.KEY_SHIFT) && Key_Check_Hold(&Keys.KEY_E)) 
+		if (t_ts1 == 1) 
 		{
-			ShiJue_mode_ctrl = 1;
-			vTaskDelay(400);
+			HAL_GPIO_WritePin(GPIOH,GPIO_PIN_2,GPIO_PIN_SET);
 		}
+		else
+		{
+			HAL_GPIO_WritePin(GPIOH,GPIO_PIN_2,GPIO_PIN_RESET);
+		}
+		
 		osDelay(2);
 	}
 }
