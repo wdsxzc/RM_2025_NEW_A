@@ -30,6 +30,7 @@ void sync_data_to_c_init()
     sync_data_to_c.data.pitch2 = 0.0f;
     sync_data_to_c.data.roll2  = 0.0f;
 	sync_data_to_c.data.arm_camera = 0.0f;
+	sync_data_to_c.data.arm_valve = 0.0f;
 }
 
 // 拷贝UART从C板接收的数据到sync_data_from_c联合体中,同时使用联合体进行数据类型转换

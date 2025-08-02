@@ -35,6 +35,7 @@ void Fetch_Silver_OnTheOther_Silver_Loop(void);
 
 void Before_Exchange_Above_Silver_Loop(void);
 void Before_Exchange_Below_Silver_Loop(void);
+void Before_Exchange_Below_Glod_Loop(void);
 
 void Before_Fetch_Ground_Loop(void);
 void Fetch_Ground_Loop(void);

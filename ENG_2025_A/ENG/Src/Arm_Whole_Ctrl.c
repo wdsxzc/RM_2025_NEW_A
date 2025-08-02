@@ -12,8 +12,8 @@ void Custom_Robot_Ctrl(void)
     PITCH2          = custom_controller_data_t.pitch2;
 //    LIFT -= RC_CtrlData.rc.ch2 * 15;
 	
-	if(custom_controller_data_t.lift_flag == 2) LIFT -= 3000;
-	if(custom_controller_data_t.lift_flag == 1) LIFT += 3000;
+	if(custom_controller_data_t.lift_flag == 2) LIFT -= 4000;
+	if(custom_controller_data_t.lift_flag == 1) LIFT += 4000;
 	
 	if(custom_controller_data_t.roll2_flag == 1) ROLL2 += 1;
 	if(custom_controller_data_t.roll2_flag == 2) ROLL2 -= 1;

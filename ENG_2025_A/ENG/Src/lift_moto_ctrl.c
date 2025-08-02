@@ -24,7 +24,7 @@ int16_t lift_moto_current_set[2];
 // 复位后(正常工作时)的参数给定(pid,电机状态参数)
 void arm_lift_init(void)
 {
-    pidInit(&pid_lift_pos, 0, 6000, LIFT_POS_P, LIFT_POS_I, LIFT_POS_D);
+    pidInit(&pid_lift_pos, 0, 10000, LIFT_POS_P, LIFT_POS_I, LIFT_POS_D);
     pidInit(&pid_lift_spd, 0, 6000, LIFT_SPD_P, LIFT_SPD_I, LIFT_SPD_D);
     MotoStateInit(&moto_gimbal[0]);
 }

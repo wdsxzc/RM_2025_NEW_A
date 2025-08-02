@@ -31,16 +31,17 @@ void DEBUG_Loop(void)
 
 extern uint16_t camera_pitch;
 extern uint16_t camera_yaw;
-extern uint16_t t_ts1;
-extern uint16_t t_ts2;
 
 extern int32_t Yaw_Flag;
+
+uint8_t Spin_Flag = 0;
 
 uint8_t Fetch_Two_Silver_ing = 0;
 uint8_t Fetch_Left_Silver_ing = 0;
 uint8_t Fetch_Right_Silver_ing = 0;
 uint8_t Before_Exchange_Above_Silver_ing = 0;
 uint8_t Before_Exchange_Below_Silver_ing = 0;
+uint8_t Before_Exchange_Below_Glod_ing = 0;
 uint8_t Fetch_Ground_ing = 0;
 uint8_t Fetch_Gold_ing = 0;
 uint8_t Gold_To_Storage_ing = 0;
@@ -74,44 +75,50 @@ void ModeTask(void const *argument)
 
         if (RC_CtrlData.rc.sw1 == 3) 
 		{
+			Spin_Flag = 0;
             Robot_Custom_Ctrl();
 			sync_data_to_c.data.arm_camera = 0;
-			CAMERA_PITCH = 1770;
-			t_ts1 = 1;
+			CAMERA_PITCH = 1650;
+
 			if(Key_Check_Hold(&Keys.KEY_CTRL) && (RC_CtrlData.mouse.press_l == 1))
 			{
 				osDelay(20);
-				LIFT = LIFT_MIN;
-				YAW1 = 10;
-				PITCH1 = 10;
-				YAW2 = 70;
+				LIFT = LIFT_MIN;				
+				YAW1 = 30;
+				PITCH1 = 5;
+				YAW2 = 30;
 				ROLL1 = -180;
-				PITCH2 = 80;
+				PITCH2 = 60;
 //				while (fabsf(YAW1 - YAW1_READ) > DM_MOTO_ERR || fabsf(PITCH1 - PITCH1_READ) > DM_MOTO_ERR  || fabsf(YAW2 - YAW2_READ) > DM_MOTO_ERR || fabsf(ROLL1 - ROLL1_READ) > DM_MOTO_ERR) {
 //					osDelay(1);
 //					Break_While
 //				}
+				ROLL2 -= 90;
+				osDelay(400);				
 			}
 		
-			if(Key_Check_Hold(&Keys.KEY_CTRL) && RC_CtrlData.mouse.press_r == 1)
+			if(Key_Check_Hold(&Keys.KEY_CTRL) && (RC_CtrlData.mouse.press_r == 1))
 			{
 				osDelay(20);
 				LIFT = LIFT_MIN;
-				YAW1 = -10;
-				PITCH1 = 10;
-				YAW2 = 110;
+				PITCH2 = 60;
+				YAW1 = -30;
+				PITCH1 = 5;
+				YAW2 = 150;
 				ROLL1 = 0;
-				PITCH2 = 80;
 //				while (fabsf(YAW1 - YAW1_READ) > DM_MOTO_ERR || fabsf(PITCH1 - PITCH1_READ) > DM_MOTO_ERR  || fabsf(YAW2 - YAW2_READ) > DM_MOTO_ERR || fabsf(ROLL1 - ROLL1_READ) > DM_MOTO_ERR) {
 //					osDelay(1);
 //					Break_While
 //				}
+				ROLL2 += 90;
+				osDelay(400);
 			}
 			
         }
 
         else if (RC_CtrlData.rc.sw1 == 1) 
 		{
+			Spin_Flag = 0;
 			if(RC_CtrlData.rc.sw2 == 1) 
 			{
 				sync_data_to_c.data.arm_camera = 0;
@@ -132,8 +139,11 @@ void ModeTask(void const *argument)
 
         else
 		{
-			t_ts1 = 0;
-			CAMERA_PITCH = 1770;
+			if(!Spin_Flag)
+			{
+				CAMERA_PITCH = 1770;
+				Spin_Flag = 1;
+			}
 			sync_data_to_c.data.arm_camera = 0;
             frame.data.mode = 1;
 		}
@@ -153,7 +163,7 @@ void ModeTask(void const *argument)
 		//###################################################取银矿###################################################
 		
         // 按下X,进入一键双银模式
-        if ((Key_Check_Hold(&Keys.KEY_CTRL) && Key_Check_Hold(&Keys.KEY_X)) || Fetch_Two_Silver_ing == 1) {
+        if (Key_Check_Hold(&Keys.KEY_X) || Fetch_Two_Silver_ing == 1) {
             Fetch_Two_Silver_ing = 1;
             Before_Fetch_Right_Silver_Loop();
 
@@ -206,7 +216,7 @@ void ModeTask(void const *argument)
 		
 		//###################################################取金矿###################################################
 		// 按下A,进入一键金模式
-        if ((Key_Check_Hold(&Keys.KEY_CTRL) && Key_Check_Hold(&Keys.KEY_A)) || Gold_To_ing == 1) {
+        if (Key_Check_Hold(&Keys.KEY_A) && (Key_Check_Hold(&Keys.KEY_CTRL) == 0)|| Gold_To_ing == 1) {
             Gold_To_ing = 1;
             Before_Fetch_Gold_Loop();
 			
@@ -214,8 +224,9 @@ void ModeTask(void const *argument)
                 osDelay(1);
             }
 			
-			LIFT = LIFT - 150000;
-			PITCH2 = -2.0f;
+			LIFT = LIFT - 50000;
+			PITCH1 = 3.5f;
+			PITCH2 = -3.3f;
 			osDelay(500);
 			
             while (RC_CtrlData.mouse.press_l != 1) {
@@ -227,7 +238,7 @@ void ModeTask(void const *argument)
         }
 				
 		// 按下S,将矿放入矿仓
-		if((Key_Check_Hold(&Keys.KEY_CTRL) && Key_Check_Hold(&Keys.KEY_S)) || Gold_To_Storage_ing == 1){
+		if(Key_Check_Hold(&Keys.KEY_S) && (Key_Check_Hold(&Keys.KEY_CTRL) == 0)|| Gold_To_Storage_ing == 1){
               Gold_To_Storage_ing = 1;
 		
 			  Fetch_Gold_To_Storage_Loop();
@@ -237,7 +248,7 @@ void ModeTask(void const *argument)
 		}
 		
 		// 按下D,带矿过狗洞姿态
-		if((Key_Check_Hold(&Keys.KEY_CTRL) && Key_Check_Hold(&Keys.KEY_D) && (Key_Check_Hold(&Keys.KEY_SHIFT) == 0)) || Gold_To_DogHole_ing == 1){
+		if((Key_Check_Hold(&Keys.KEY_D) && Key_Check_Hold(&Keys.KEY_CTRL) == 0) || Gold_To_DogHole_ing == 1){
             Gold_To_DogHole_ing = 1;
 			
 		
@@ -257,11 +268,11 @@ void ModeTask(void const *argument)
 			CAMERA_PITCH = 1450 + 25/90*950;
 			CAMERA_LIFT = CAMERA_LIFT_STD;
 		    Gold_To_DogHole_ing = 0;
-
+			Spin_Flag = 0;
 		}
 		
 		// 按下F,带矿倒过狗洞姿态
-		if(Key_Check_Hold(&Keys.KEY_CTRL) && Key_Check_Hold(&Keys.KEY_F) && (Key_Check_Hold(&Keys.KEY_SHIFT) == 0) || Gold_To_DogHole_Back_ing == 1){
+		if((Key_Check_Hold(&Keys.KEY_F) && Key_Check_Hold(&Keys.KEY_CTRL) == 0) || Gold_To_DogHole_Back_ing == 1){
             Gold_To_DogHole_Back_ing = 1;
 			
 			Fetch_Gold_To_DogHole_Gesture_Loop();
@@ -293,15 +304,15 @@ void ModeTask(void const *argument)
 			vTaskDelay(10);
 			ui_remove_g_4();
 			vTaskDelay(10);
-			ui_remove_g_3();
+			ui_remove_g_Ungroup();
 			vTaskDelay(10);
-			ui_remove_g_3();
+			ui_remove_g_Ungroup();
 			vTaskDelay(10);
-			ui_remove_g_3();
+			ui_remove_g_Ungroup();
 			vTaskDelay(10);
-			ui_remove_g_3();
+			ui_remove_g_Ungroup();
 			vTaskDelay(10);
-			ui_remove_g_3();
+			ui_remove_g_Ungroup();
 			vTaskDelay(10);
 			
             while (RC_CtrlData.mouse.press_l != 1) {
@@ -326,12 +337,13 @@ void ModeTask(void const *argument)
 			ui_remove_g_2();
 			vTaskDelay(10);
 		    Gold_To_DogHole_Back_ing = 0;
+			Spin_Flag = 0;
 
 		}
 		
 		// 按下D,不带矿过狗洞姿态
-		if((Key_Check_Hold(&Keys.KEY_CTRL) && Key_Check_Hold(&Keys.KEY_SHIFT) && Key_Check_Hold(&Keys.KEY_D)) || To_DogHole_ing == 1){
-            To_DogHole_ing = 1;
+		if((Key_Check_Hold(&Keys.KEY_CTRL) && Key_Check_Hold(&Keys.KEY_D) && (Key_Check_Hold(&Keys.KEY_SHIFT) == 0 )) || To_DogHole_ing == 1){
+            To_DogHole_ing = 1; 
 			
 		
 			To_DogHole_Gesture_Loop();
@@ -353,11 +365,12 @@ void ModeTask(void const *argument)
 			
 			CAMERA_LIFT = CAMERA_LIFT_STD;
 		    To_DogHole_ing = 0;
+			Spin_Flag = 0;
 
 		}
 		
 		// 按下F,不带矿倒过狗洞姿态
-		if((Key_Check_Hold(&Keys.KEY_CTRL) && Key_Check_Hold(&Keys.KEY_SHIFT) && Key_Check_Hold(&Keys.KEY_F)) || To_DogHole_Back_ing == 1){
+		if((Key_Check_Hold(&Keys.KEY_CTRL) && Key_Check_Hold(&Keys.KEY_F)) || To_DogHole_Back_ing == 1){
             To_DogHole_Back_ing = 1;
 			
 			To_DogHole_Gesture_Loop();
@@ -390,15 +403,15 @@ void ModeTask(void const *argument)
 			vTaskDelay(10);
 			ui_remove_g_4();
 			vTaskDelay(10);
-			ui_remove_g_3();
+			ui_remove_g_Ungroup();
 			vTaskDelay(10);
-			ui_remove_g_3();
+			ui_remove_g_Ungroup();
 			vTaskDelay(10);
-			ui_remove_g_3();
+			ui_remove_g_Ungroup();
 			vTaskDelay(10);
-			ui_remove_g_3();
+			ui_remove_g_Ungroup();
 			vTaskDelay(10);
-			ui_remove_g_3();
+			ui_remove_g_Ungroup();
 			vTaskDelay(10);
 			
             while (RC_CtrlData.mouse.press_l != 1) {
@@ -423,7 +436,7 @@ void ModeTask(void const *argument)
 			ui_remove_g_2();
 			vTaskDelay(10);
 		    To_DogHole_Back_ing = 0;
-
+			Spin_Flag = 0;
 		}
 		
 		
@@ -434,7 +447,7 @@ void ModeTask(void const *argument)
 		//###################################################取地矿###################################################
 		
         // 按下G,进入地矿模式
-        if ((Key_Check_Hold(&Keys.KEY_CTRL) && Key_Check_Hold(&Keys.KEY_G)) || Fetch_Ground_ing == 1) {
+        if (Key_Check_Hold(&Keys.KEY_G) || Fetch_Ground_ing == 1) {
             Fetch_Ground_ing = 1;
 			
             Before_Fetch_Ground_Loop();
@@ -459,7 +472,7 @@ void ModeTask(void const *argument)
 		//###################################################兑银矿###################################################
 
 		// 按下V,准备兑上银矿
-        if ((Key_Check_Hold(&Keys.KEY_CTRL) && Key_Check_Hold(&Keys.KEY_V)) || Before_Exchange_Above_Silver_ing == 1) {
+        if (Key_Check_Hold(&Keys.KEY_V) || Before_Exchange_Above_Silver_ing == 1) {
             Before_Exchange_Above_Silver_ing = 1;
 			
 			Before_Exchange_Above_Silver_Loop();
@@ -468,12 +481,21 @@ void ModeTask(void const *argument)
         }
 		
 		// 按下B,准备兑下银矿
-        if ((Key_Check_Hold(&Keys.KEY_CTRL) && Key_Check_Hold(&Keys.KEY_B)) || Before_Exchange_Below_Silver_ing == 1) {
+        if ((Key_Check_Hold(&Keys.KEY_CTRL) == 0 && Key_Check_Hold(&Keys.KEY_B)) || Before_Exchange_Below_Silver_ing == 1) {
             Before_Exchange_Below_Silver_ing = 1;
 			
 			Before_Exchange_Below_Silver_Loop();
 			
 			Before_Exchange_Below_Silver_ing = 0;
+        }
+		
+		// 按下ctrl+B,准备兑下金矿
+        if ((Key_Check_Hold(&Keys.KEY_CTRL) && Key_Check_Hold(&Keys.KEY_B)) || Before_Exchange_Below_Glod_ing == 1) {
+            Before_Exchange_Below_Glod_ing = 1;
+			
+			Before_Exchange_Below_Glod_Loop();
+			
+			Before_Exchange_Below_Glod_ing = 0;
         }
 		
 		//###################################################兑银矿###################################################
@@ -500,11 +522,6 @@ void ModeTask(void const *argument)
 void Before_Fetch_Right_Silver_Loop(void)
 {
 	ROLL2 = 0;
-    LIFT = LIFT_SILVER_UP;
-    while (abs(LIFT - LIFT_READ) > LIFT_ERR) {
-        osDelay(1);
-			Break_While
-    }
 
     YAW1   = -38.0f;
     YAW2   = 145.0f;
@@ -515,8 +532,9 @@ void Before_Fetch_Right_Silver_Loop(void)
 			Break_While
     }
 	
+	LIFT = LIFT_SILVER_UP;
 	PITCH1 = -19.81f;
-    while (fabsf(PITCH1 - PITCH1_READ) > DM_MOTO_ERR) {
+    while (abs(LIFT - LIFT_READ) > LIFT_ERR || fabsf(PITCH1 - PITCH1_READ) > DM_MOTO_ERR) {
         osDelay(1);
 			Break_While
     }
@@ -527,13 +545,7 @@ void Before_Fetch_Right_Silver_Loop(void)
 void Before_Fetch_Left_Silver_Loop(void)
 {
 	ROLL2 = 0;
-    LIFT = LIFT_SILVER_UP;
 	PITCH1 = 10.0f;
-    while (abs(LIFT - LIFT_READ) > LIFT_ERR || fabsf(PITCH1 - PITCH1_READ) > DM_MOTO_ERR) {
-        osDelay(1);
-			Break_While
-    }
-	
     YAW1   = 38.0f;
     YAW2   = 35.0f;
     ROLL1  = -70.0f;
@@ -544,11 +556,13 @@ void Before_Fetch_Left_Silver_Loop(void)
 			Break_While
     }
 	
+	LIFT = LIFT_SILVER_UP;
 	PITCH1 = -19.81f;
-    while (fabsf(PITCH1 - PITCH1_READ) > DM_MOTO_ERR) {
+    while (abs(LIFT - LIFT_READ) > LIFT_ERR || fabsf(PITCH1 - PITCH1_READ) > DM_MOTO_ERR) {
         osDelay(1);
 			Break_While
     }
+
 }
 
 
@@ -577,9 +591,9 @@ void Fetch_Silver_To_Storage_Loop(void)
 		Break_While
     }
 	
-	YAW1   = -51.91f;
+	YAW1   = -60.0f;
     PITCH1 = -0.440f;
-    YAW2   = -37.518f;
+    YAW2   = -40.0f;
     ROLL1  = -90.0f;
     PITCH2 = 88.890f;
 	
@@ -591,7 +605,7 @@ void Fetch_Silver_To_Storage_Loop(void)
 		Break_While
     }
 	
-	LIFT = -550000;
+	LIFT = -600000;
     while (abs(LIFT - LIFT_READ) > LIFT_ERR) {
         osDelay(1);
 			Break_While
@@ -599,7 +613,7 @@ void Fetch_Silver_To_Storage_Loop(void)
 	
 	osDelay(100);
     arm_xipan_close();
-	osDelay(1500);
+	osDelay(1000);
 	
     LIFT -= 250000;
     while (abs(LIFT - LIFT_READ) > LIFT_ERR) {
@@ -652,7 +666,7 @@ void Fetch_Silver_OnTheOther_Silver_Loop(void)
 void Before_Exchange_Above_Silver_Loop(void)
 {
     arm_xipan_close();
-	osDelay(2000);
+	osDelay(1500);
 	
 	YAW1   = -5.47f;
     PITCH1 = 0.0f;
@@ -723,10 +737,78 @@ void Before_Exchange_Above_Silver_Loop(void)
 
 // 取下银矿并准备兑换
 void Before_Exchange_Below_Silver_Loop(void)
-{
-    arm_xipan_close();
-	osDelay(200);
+{	
+    YAW1 = 0.0f;
+	ROLL2 = 0;
+    while (fabsf(YAW1 - YAW1_READ) > DM_MOTO_ERR) {
+        osDelay(1);
+			Break_While
+	}
 	
+    LIFT = -100000;
+	YAW1   = -10.0f;
+    PITCH1 = 0.0f;
+    YAW2   = -48.0f;
+    ROLL1  = -120.0f;
+    PITCH2 = 27.0f;
+	
+    while (fabsf(YAW1 - YAW1_READ) > 10.0f || fabsf(PITCH1 - PITCH1_READ) > 10.0f  || fabsf(YAW2 - YAW2_READ) > 10.0f || fabsf(ROLL1 - ROLL1_READ) > 10.0f) {
+        osDelay(1);
+		Break_While
+	}
+    while (abs(LIFT - LIFT_READ) > LIFT_ERR) {
+        osDelay(1);
+			Break_While
+	}
+
+	arm_xipan_open();
+	
+	PITCH1 = -24.0f;
+    while (fabsf(PITCH1 - PITCH1_READ) > 10.0f) {
+        osDelay(1);
+			Break_While
+	}
+	YAW1 = -24.0f;
+    while (fabsf(YAW1 - YAW1_READ) > DM_MOTO_ERR) {
+        osDelay(1);
+			Break_While
+	}
+	
+	osDelay(500);
+//	YAW1   = -43.25f;
+//    while (fabsf(YAW1 - YAW1_READ) > DM_MOTO_ERR) {
+//        osDelay(1);
+//			Break_While
+//    }
+//	osDelay(100);
+	
+	LIFT -= 500000;
+	osDelay(300);
+	
+
+	LIFT -= 450000;
+	PITCH1 = -10.0f;
+	
+    osDelay(500);
+	
+	YAW1   = 0.0f;
+	YAW2   = 0.0f;
+	
+	osDelay(300);
+	
+	ROLL1  = -90.0f;
+    PITCH2 = 70.0f;
+	ROLL2 += 30;
+
+	while (fabsf(YAW1 - YAW1_READ) > DM_MOTO_ERR || fabsf(YAW2 - YAW2_READ) > DM_MOTO_ERR) {
+        osDelay(1);
+		Break_While
+	}
+}
+
+// 取下金矿并准备兑换
+void Before_Exchange_Below_Glod_Loop(void)
+{
     YAW1 = 0.0f;
 	ROLL2 = 0;
     while (fabsf(YAW1 - YAW1_READ) > DM_MOTO_ERR) {
@@ -748,13 +830,13 @@ void Before_Exchange_Below_Silver_Loop(void)
 
 	arm_xipan_open();
 	
-    while (fabsf(YAW1 - YAW1_READ) > DM_MOTO_ERR || fabsf(PITCH1 - PITCH1_READ) > DM_MOTO_ERR  || fabsf(YAW2 - YAW2_READ) > DM_MOTO_ERR || fabsf(ROLL1 - ROLL1_READ) > DM_MOTO_ERR) {
+    while (fabsf(YAW1 - YAW1_READ) > 10.0f || fabsf(PITCH1 - PITCH1_READ) > 10.0f  || fabsf(YAW2 - YAW2_READ) > 10.0f || fabsf(ROLL1 - ROLL1_READ) > 10.0f) {
         osDelay(1);
 		Break_While
 	}
 	
 	PITCH1 = -24.0f;
-    while (fabsf(PITCH1 - PITCH1_READ) > DM_MOTO_ERR) {
+    while (fabsf(PITCH1 - PITCH1_READ) > 10.0f) {
         osDelay(1);
 			Break_While
 	}
@@ -781,9 +863,6 @@ void Before_Exchange_Below_Silver_Loop(void)
 
 	LIFT -= 450000;
 	PITCH1 = -10.0f;
-    ROLL1  = -90.0f;
-    PITCH2 = 70.0f;
-	ROLL2 -= 60;
 	
     while (abs(LIFT - LIFT_READ) > LIFT_ERR || fabsf(PITCH1 - PITCH1_READ) > DM_MOTO_ERR  || fabsf(ROLL1 - ROLL1_READ) > DM_MOTO_ERR) {
         osDelay(1);
@@ -792,6 +871,13 @@ void Before_Exchange_Below_Silver_Loop(void)
 	
 	YAW1   = 0.0f;
 	YAW2   = 0.0f;
+	
+	osDelay(300);
+	
+	ROLL1  = -90.0f;
+    PITCH2 = 70.0f;
+	ROLL2 -= 60;
+
 	while (fabsf(YAW1 - YAW1_READ) > DM_MOTO_ERR || fabsf(YAW2 - YAW2_READ) > DM_MOTO_ERR) {
         osDelay(1);
 		Break_While
@@ -805,12 +891,6 @@ void Before_Exchange_Below_Silver_Loop(void)
 void Before_Fetch_Ground_Loop(void)
 {
     arm_xipan_open();
-	
-    LIFT = -450000;
-    while (abs(LIFT - LIFT_READ) > LIFT_ERR) {
-        osDelay(1);
-			Break_While
-	}
 
 	YAW1   = 30.0f;
     PITCH1 = 0.0f;
@@ -821,6 +901,13 @@ void Before_Fetch_Ground_Loop(void)
     while (fabsf(YAW1 - YAW1_READ) > DM_MOTO_ERR || fabsf(PITCH1 - PITCH1_READ) > DM_MOTO_ERR  || fabsf(YAW2 - YAW2_READ) > DM_MOTO_ERR || fabsf(ROLL1 - ROLL1_READ) > DM_MOTO_ERR) {
         osDelay(1);
 		Break_While
+	}
+	
+		
+    LIFT = -450000;
+    while (abs(LIFT - LIFT_READ) > LIFT_ERR) {
+        osDelay(1);
+			Break_While
 	}
 	
 	PITCH1 = -20.0f;
@@ -840,9 +927,11 @@ void Fetch_Ground_Loop(void)
         osDelay(1);
 			Break_While
 	}
-	osDelay(200);
+	osDelay(500);
 
 	LIFT = -850000;
+	osDelay(500);
+	
 	YAW1   = 0.0f;
     PITCH1 = 0.0f;
 	YAW2   = 0.0f;
@@ -864,10 +953,10 @@ void Before_Fetch_Gold_Loop(void)
 	arm_xipan_open();
 	
     YAW1   = 0.0f;
-	PITCH1 = 3.5f;
+	PITCH1 = 1.0f;
     YAW2   = 90.0f;
     ROLL1  = -90.0f;
-	PITCH2 = 0.0f;
+	PITCH2 = 6.0f;
 	ROLL2 = 0.0f;
     while (fabsf(YAW1 - YAW1_READ) > DM_MOTO_ERR || fabsf(PITCH1 - PITCH1_READ) > DM_MOTO_ERR || fabsf(YAW2 - YAW2_READ) > DM_MOTO_ERR || fabsf(ROLL1 - ROLL1_READ) > DM_MOTO_ERR) {
         osDelay(1);
@@ -894,10 +983,16 @@ void Fetch_Gold_To_Storage_Loop(void)
 			Break_While
     }
 	
-    ROLL2  += 87.0f;
-	YAW1   = -54.91f;
-    PITCH1 = 0.0f;
-    YAW2   = -39.0f;
+    ROLL2  += 90.0f;
+//	YAW1   = -54.91f;
+//    PITCH1 = 0.0f;
+//    YAW2   = -39.0f;
+//    ROLL1  = -90.0f;
+//    PITCH2 = 88.890f;
+	
+	YAW1   = -60.0f;
+    PITCH1 = -0.440f;
+    YAW2   = -40.0f;
     ROLL1  = -90.0f;
     PITCH2 = 88.890f;
 	
@@ -906,7 +1001,7 @@ void Fetch_Gold_To_Storage_Loop(void)
 				Break_While
     }
 	
-	LIFT = -520000;
+	LIFT = -550000;
     while (abs(LIFT - LIFT_READ) > LIFT_ERR) {
         osDelay(1);
 			Break_While
@@ -916,7 +1011,7 @@ void Fetch_Gold_To_Storage_Loop(void)
     arm_xipan_close();
 	osDelay(1000);
 	
-    LIFT -= 180000;
+    LIFT -= 250000;
     while (abs(LIFT - LIFT_READ) > LIFT_ERR) {
         osDelay(1);
 			Break_While

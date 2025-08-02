@@ -57,10 +57,10 @@ I (..\ENG\Inc\struct_typedef.h)(0x682339B9)
 I (..\ENG\Inc\crc8_crc16.h)(0x682339B9)
 I (..\ENG\Inc\crc.h)(0x682339B9)
 I (..\ENG\Inc\protocol.h)(0x68260215)
-I (..\ENG\UI\ui.h)(0x6835F531)
+I (..\ENG\UI\ui.h)(0x6886FFFD)
 I (..\ENG\UI\ui_interface.h)(0x6835F83A)
 I (..\ENG\UI\ui_types.h)(0x6835F531)
-I (..\ENG\UI\ui_g.h)(0x6835F531)
+I (..\ENG\UI\ui_g.h)(0x6886FF50)
 I (..\USB_DEVICE\App\usbd_cdc_if.h)(0x682339B9)
 I (..\Middlewares\ST\STM32_USB_Device_Library\Class\CDC\Inc\usbd_cdc.h)(0x680B4801)
 I (..\Middlewares\ST\STM32_USB_Device_Library\Core\Inc\usbd_ioreq.h)(0x680B4801)
@@ -75,16 +75,16 @@ I (..\ENG\Inc\moto.h)(0x682339B9)
 I (..\ENG\Inc\MTMotoDriver.h)(0x686B8013)
 I (..\ENG\Inc\PID.h)(0x682339B9)
 I (..\ENG\Inc\bsp_can.h)(0x682339B9)
-I (..\ENG\Inc\bsp_uart.h)(0x686A6EBB)
-I (..\ENG\Inc\modes.h)(0x68373155)
+I (..\ENG\Inc\bsp_uart.h)(0x6880D988)
+I (..\ENG\Inc\modes.h)(0x687CB682)
 I (..\ENG\Inc\RcDriver.h)(0x682339B9)
 I (..\ENG\Inc\Key.h)(0x682339B9)
 I (..\ENG\Inc\chassis.h)(0x682339B9)
-I (..\ENG\Inc\referee.h)(0x68348A3D)
+I (..\ENG\Inc\referee.h)(0x68878E48)
 I (..\ENG\Inc\wd.h)(0x682339B9)
 I (..\ENG\Inc\lift_moto_ctrl.h)(0x6875C967)
 I (..\ENG\Inc\Arm_Whole_Ctrl.h)(0x682339B9)
-I (..\ENG\Inc\relay.h)(0x682339B9)
+I (..\ENG\Inc\relay.h)(0x6880DA88)
 I (..\ENG\Inc\SelfCheck_Task.h)(0x682339B9)
 F (../Core/Src/gpio.c)(0x68762AA3)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O3 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../ENG/Inc -I ../ENG/Src -I ../ENG/UI -I ../Middlewares/ST/ARM/DSP/Lib -I ../Middlewares/ST/ARM/DSP/Inc -I ../USB_DEVICE/App -I ../USB_DEVICE/Target -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc-I./RTE/_ENG_2025_1-ID:/keil/pack/ARM/CMSIS/6.1.0/CMSIS/Core/Include-D__UVISION_VERSION="542" -DSTM32F427xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F427xx-o eng_2025_1/gpio.o -MMD)
 I (..\Core\Inc\gpio.h)(0x682339B9)
@@ -336,10 +336,10 @@ I (..\ENG\Inc\struct_typedef.h)(0x682339B9)
 I (..\ENG\Inc\crc8_crc16.h)(0x682339B9)
 I (..\ENG\Inc\crc.h)(0x682339B9)
 I (..\ENG\Inc\protocol.h)(0x68260215)
-I (..\ENG\UI\ui.h)(0x6835F531)
+I (..\ENG\UI\ui.h)(0x6886FFFD)
 I (..\ENG\UI\ui_interface.h)(0x6835F83A)
 I (..\ENG\UI\ui_types.h)(0x6835F531)
-I (..\ENG\UI\ui_g.h)(0x6835F531)
+I (..\ENG\UI\ui_g.h)(0x6886FF50)
 I (..\USB_DEVICE\App\usbd_cdc_if.h)(0x682339B9)
 I (..\Middlewares\ST\STM32_USB_Device_Library\Class\CDC\Inc\usbd_cdc.h)(0x680B4801)
 I (..\Middlewares\ST\STM32_USB_Device_Library\Core\Inc\usbd_ioreq.h)(0x680B4801)
@@ -357,16 +357,16 @@ I (..\ENG\Inc\moto.h)(0x682339B9)
 I (..\ENG\Inc\MTMotoDriver.h)(0x686B8013)
 I (..\ENG\Inc\PID.h)(0x682339B9)
 I (..\ENG\Inc\bsp_can.h)(0x682339B9)
-I (..\ENG\Inc\bsp_uart.h)(0x686A6EBB)
-I (..\ENG\Inc\modes.h)(0x68373155)
+I (..\ENG\Inc\bsp_uart.h)(0x6880D988)
+I (..\ENG\Inc\modes.h)(0x687CB682)
 I (..\ENG\Inc\RcDriver.h)(0x682339B9)
 I (..\ENG\Inc\Key.h)(0x682339B9)
 I (..\ENG\Inc\chassis.h)(0x682339B9)
-I (..\ENG\Inc\referee.h)(0x68348A3D)
+I (..\ENG\Inc\referee.h)(0x68878E48)
 I (..\ENG\Inc\wd.h)(0x682339B9)
 I (..\ENG\Inc\lift_moto_ctrl.h)(0x6875C967)
 I (..\ENG\Inc\Arm_Whole_Ctrl.h)(0x682339B9)
-I (..\ENG\Inc\relay.h)(0x682339B9)
+I (..\ENG\Inc\relay.h)(0x6880DA88)
 I (..\ENG\Inc\SelfCheck_Task.h)(0x682339B9)
 F (../Core/Src/stm32f4xx_hal_msp.c)(0x682339B9)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O3 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../ENG/Inc -I ../ENG/Src -I ../ENG/UI -I ../Middlewares/ST/ARM/DSP/Lib -I ../Middlewares/ST/ARM/DSP/Inc -I ../USB_DEVICE/App -I ../USB_DEVICE/Target -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc-I./RTE/_ENG_2025_1-ID:/keil/pack/ARM/CMSIS/6.1.0/CMSIS/Core/Include-D__UVISION_VERSION="542" -DSTM32F427xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F427xx-o eng_2025_1/stm32f4xx_hal_msp.o -MMD)
 I (..\Core\Inc\main.h)(0x682339B9)
@@ -1235,10 +1235,10 @@ I (..\ENG\Inc\struct_typedef.h)(0x682339B9)
 I (..\ENG\Inc\crc8_crc16.h)(0x682339B9)
 I (..\ENG\Inc\crc.h)(0x682339B9)
 I (..\ENG\Inc\protocol.h)(0x68260215)
-I (..\ENG\UI\ui.h)(0x6835F531)
+I (..\ENG\UI\ui.h)(0x6886FFFD)
 I (..\ENG\UI\ui_interface.h)(0x6835F83A)
 I (..\ENG\UI\ui_types.h)(0x6835F531)
-I (..\ENG\UI\ui_g.h)(0x6835F531)
+I (..\ENG\UI\ui_g.h)(0x6886FF50)
 I (..\USB_DEVICE\App\usbd_cdc_if.h)(0x682339B9)
 I (..\Middlewares\ST\STM32_USB_Device_Library\Class\CDC\Inc\usbd_cdc.h)(0x680B4801)
 I (..\Middlewares\ST\STM32_USB_Device_Library\Core\Inc\usbd_ioreq.h)(0x680B4801)
@@ -1256,16 +1256,16 @@ I (..\ENG\Inc\moto.h)(0x682339B9)
 I (..\ENG\Inc\MTMotoDriver.h)(0x686B8013)
 I (..\ENG\Inc\PID.h)(0x682339B9)
 I (..\ENG\Inc\bsp_can.h)(0x682339B9)
-I (..\ENG\Inc\bsp_uart.h)(0x686A6EBB)
-I (..\ENG\Inc\modes.h)(0x68373155)
+I (..\ENG\Inc\bsp_uart.h)(0x6880D988)
+I (..\ENG\Inc\modes.h)(0x687CB682)
 I (..\ENG\Inc\RcDriver.h)(0x682339B9)
 I (..\ENG\Inc\Key.h)(0x682339B9)
 I (..\ENG\Inc\chassis.h)(0x682339B9)
-I (..\ENG\Inc\referee.h)(0x68348A3D)
+I (..\ENG\Inc\referee.h)(0x68878E48)
 I (..\ENG\Inc\wd.h)(0x682339B9)
 I (..\ENG\Inc\lift_moto_ctrl.h)(0x6875C967)
 I (..\ENG\Inc\Arm_Whole_Ctrl.h)(0x682339B9)
-I (..\ENG\Inc\relay.h)(0x682339B9)
+I (..\ENG\Inc\relay.h)(0x6880DA88)
 I (..\ENG\Inc\SelfCheck_Task.h)(0x682339B9)
 F (..\ENG\Src\time.c)(0x682339B9)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O3 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../ENG/Inc -I ../ENG/Src -I ../ENG/UI -I ../Middlewares/ST/ARM/DSP/Lib -I ../Middlewares/ST/ARM/DSP/Inc -I ../USB_DEVICE/App -I ../USB_DEVICE/Target -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc-I./RTE/_ENG_2025_1-ID:/keil/pack/ARM/CMSIS/6.1.0/CMSIS/Core/Include-D__UVISION_VERSION="542" -DSTM32F427xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F427xx-o eng_2025_1/time.o -MMD)
 I (..\ENG\Inc\time.h)(0x682339B9)
@@ -1351,10 +1351,10 @@ I (..\ENG\Inc\struct_typedef.h)(0x682339B9)
 I (..\ENG\Inc\crc8_crc16.h)(0x682339B9)
 I (..\ENG\Inc\crc.h)(0x682339B9)
 I (..\ENG\Inc\protocol.h)(0x68260215)
-I (..\ENG\UI\ui.h)(0x6835F531)
+I (..\ENG\UI\ui.h)(0x6886FFFD)
 I (..\ENG\UI\ui_interface.h)(0x6835F83A)
 I (..\ENG\UI\ui_types.h)(0x6835F531)
-I (..\ENG\UI\ui_g.h)(0x6835F531)
+I (..\ENG\UI\ui_g.h)(0x6886FF50)
 I (..\USB_DEVICE\App\usbd_cdc_if.h)(0x682339B9)
 I (..\Middlewares\ST\STM32_USB_Device_Library\Class\CDC\Inc\usbd_cdc.h)(0x680B4801)
 I (..\Middlewares\ST\STM32_USB_Device_Library\Core\Inc\usbd_ioreq.h)(0x680B4801)
@@ -1372,16 +1372,16 @@ I (..\ENG\Inc\moto.h)(0x682339B9)
 I (..\ENG\Inc\MTMotoDriver.h)(0x686B8013)
 I (..\ENG\Inc\PID.h)(0x682339B9)
 I (..\ENG\Inc\bsp_can.h)(0x682339B9)
-I (..\ENG\Inc\bsp_uart.h)(0x686A6EBB)
-I (..\ENG\Inc\modes.h)(0x68373155)
+I (..\ENG\Inc\bsp_uart.h)(0x6880D988)
+I (..\ENG\Inc\modes.h)(0x687CB682)
 I (..\ENG\Inc\RcDriver.h)(0x682339B9)
 I (..\ENG\Inc\Key.h)(0x682339B9)
 I (..\ENG\Inc\chassis.h)(0x682339B9)
-I (..\ENG\Inc\referee.h)(0x68348A3D)
+I (..\ENG\Inc\referee.h)(0x68878E48)
 I (..\ENG\Inc\wd.h)(0x682339B9)
 I (..\ENG\Inc\lift_moto_ctrl.h)(0x6875C967)
 I (..\ENG\Inc\Arm_Whole_Ctrl.h)(0x682339B9)
-I (..\ENG\Inc\relay.h)(0x682339B9)
+I (..\ENG\Inc\relay.h)(0x6880DA88)
 I (..\ENG\Inc\SelfCheck_Task.h)(0x682339B9)
 F (..\ENG\Src\bsp_can.c)(0x682339B9)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O3 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../ENG/Inc -I ../ENG/Src -I ../ENG/UI -I ../Middlewares/ST/ARM/DSP/Lib -I ../Middlewares/ST/ARM/DSP/Inc -I ../USB_DEVICE/App -I ../USB_DEVICE/Target -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc-I./RTE/_ENG_2025_1-ID:/keil/pack/ARM/CMSIS/6.1.0/CMSIS/Core/Include-D__UVISION_VERSION="542" -DSTM32F427xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F427xx-o eng_2025_1/bsp_can.o -MMD)
 I (..\ENG\Inc\includes.h)(0x686A6AAC)
@@ -1436,10 +1436,10 @@ I (..\ENG\Inc\struct_typedef.h)(0x682339B9)
 I (..\ENG\Inc\crc8_crc16.h)(0x682339B9)
 I (..\ENG\Inc\crc.h)(0x682339B9)
 I (..\ENG\Inc\protocol.h)(0x68260215)
-I (..\ENG\UI\ui.h)(0x6835F531)
+I (..\ENG\UI\ui.h)(0x6886FFFD)
 I (..\ENG\UI\ui_interface.h)(0x6835F83A)
 I (..\ENG\UI\ui_types.h)(0x6835F531)
-I (..\ENG\UI\ui_g.h)(0x6835F531)
+I (..\ENG\UI\ui_g.h)(0x6886FF50)
 I (..\USB_DEVICE\App\usbd_cdc_if.h)(0x682339B9)
 I (..\Middlewares\ST\STM32_USB_Device_Library\Class\CDC\Inc\usbd_cdc.h)(0x680B4801)
 I (..\Middlewares\ST\STM32_USB_Device_Library\Core\Inc\usbd_ioreq.h)(0x680B4801)
@@ -1457,16 +1457,16 @@ I (..\ENG\Inc\moto.h)(0x682339B9)
 I (..\ENG\Inc\MTMotoDriver.h)(0x686B8013)
 I (..\ENG\Inc\PID.h)(0x682339B9)
 I (..\ENG\Inc\bsp_can.h)(0x682339B9)
-I (..\ENG\Inc\bsp_uart.h)(0x686A6EBB)
-I (..\ENG\Inc\modes.h)(0x68373155)
+I (..\ENG\Inc\bsp_uart.h)(0x6880D988)
+I (..\ENG\Inc\modes.h)(0x687CB682)
 I (..\ENG\Inc\RcDriver.h)(0x682339B9)
 I (..\ENG\Inc\Key.h)(0x682339B9)
 I (..\ENG\Inc\chassis.h)(0x682339B9)
-I (..\ENG\Inc\referee.h)(0x68348A3D)
+I (..\ENG\Inc\referee.h)(0x68878E48)
 I (..\ENG\Inc\wd.h)(0x682339B9)
 I (..\ENG\Inc\lift_moto_ctrl.h)(0x6875C967)
 I (..\ENG\Inc\Arm_Whole_Ctrl.h)(0x682339B9)
-I (..\ENG\Inc\relay.h)(0x682339B9)
+I (..\ENG\Inc\relay.h)(0x6880DA88)
 I (..\ENG\Inc\SelfCheck_Task.h)(0x682339B9)
 F (..\ENG\Src\wd.c)(0x682339B9)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O3 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../ENG/Inc -I ../ENG/Src -I ../ENG/UI -I ../Middlewares/ST/ARM/DSP/Lib -I ../Middlewares/ST/ARM/DSP/Inc -I ../USB_DEVICE/App -I ../USB_DEVICE/Target -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc-I./RTE/_ENG_2025_1-ID:/keil/pack/ARM/CMSIS/6.1.0/CMSIS/Core/Include-D__UVISION_VERSION="542" -DSTM32F427xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F427xx-o eng_2025_1/wd.o -MMD)
 I (..\ENG\Inc\wd.h)(0x682339B9)
@@ -1552,10 +1552,10 @@ I (..\ENG\Inc\struct_typedef.h)(0x682339B9)
 I (..\ENG\Inc\crc8_crc16.h)(0x682339B9)
 I (..\ENG\Inc\crc.h)(0x682339B9)
 I (..\ENG\Inc\protocol.h)(0x68260215)
-I (..\ENG\UI\ui.h)(0x6835F531)
+I (..\ENG\UI\ui.h)(0x6886FFFD)
 I (..\ENG\UI\ui_interface.h)(0x6835F83A)
 I (..\ENG\UI\ui_types.h)(0x6835F531)
-I (..\ENG\UI\ui_g.h)(0x6835F531)
+I (..\ENG\UI\ui_g.h)(0x6886FF50)
 I (..\USB_DEVICE\App\usbd_cdc_if.h)(0x682339B9)
 I (..\Middlewares\ST\STM32_USB_Device_Library\Class\CDC\Inc\usbd_cdc.h)(0x680B4801)
 I (..\Middlewares\ST\STM32_USB_Device_Library\Core\Inc\usbd_ioreq.h)(0x680B4801)
@@ -1573,19 +1573,19 @@ I (..\ENG\Inc\moto.h)(0x682339B9)
 I (..\ENG\Inc\MTMotoDriver.h)(0x686B8013)
 I (..\ENG\Inc\PID.h)(0x682339B9)
 I (..\ENG\Inc\bsp_can.h)(0x682339B9)
-I (..\ENG\Inc\bsp_uart.h)(0x686A6EBB)
-I (..\ENG\Inc\modes.h)(0x68373155)
+I (..\ENG\Inc\bsp_uart.h)(0x6880D988)
+I (..\ENG\Inc\modes.h)(0x687CB682)
 I (..\ENG\Inc\RcDriver.h)(0x682339B9)
 I (..\ENG\Inc\Key.h)(0x682339B9)
 I (..\ENG\Inc\chassis.h)(0x682339B9)
-I (..\ENG\Inc\referee.h)(0x68348A3D)
+I (..\ENG\Inc\referee.h)(0x68878E48)
 I (..\ENG\Inc\wd.h)(0x682339B9)
 I (..\ENG\Inc\lift_moto_ctrl.h)(0x6875C967)
 I (..\ENG\Inc\Arm_Whole_Ctrl.h)(0x682339B9)
-I (..\ENG\Inc\relay.h)(0x682339B9)
+I (..\ENG\Inc\relay.h)(0x6880DA88)
 I (..\ENG\Inc\SelfCheck_Task.h)(0x682339B9)
 F (..\ENG\Src\referee.c)(0x68349FA5)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O3 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../ENG/Inc -I ../ENG/Src -I ../ENG/UI -I ../Middlewares/ST/ARM/DSP/Lib -I ../Middlewares/ST/ARM/DSP/Inc -I ../USB_DEVICE/App -I ../USB_DEVICE/Target -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc-I./RTE/_ENG_2025_1-ID:/keil/pack/ARM/CMSIS/6.1.0/CMSIS/Core/Include-D__UVISION_VERSION="542" -DSTM32F427xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F427xx-o eng_2025_1/referee.o -MMD)
-I (..\ENG\Inc\referee.h)(0x68348A3D)
+I (..\ENG\Inc\referee.h)(0x68878E48)
 I (..\ENG\Inc\includes.h)(0x686A6AAC)
 I (..\Core\Inc\main.h)(0x682339B9)
 I (..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal.h)(0x680B4800)
@@ -1638,10 +1638,10 @@ I (..\ENG\Inc\struct_typedef.h)(0x682339B9)
 I (..\ENG\Inc\crc8_crc16.h)(0x682339B9)
 I (..\ENG\Inc\crc.h)(0x682339B9)
 I (..\ENG\Inc\protocol.h)(0x68260215)
-I (..\ENG\UI\ui.h)(0x6835F531)
+I (..\ENG\UI\ui.h)(0x6886FFFD)
 I (..\ENG\UI\ui_interface.h)(0x6835F83A)
 I (..\ENG\UI\ui_types.h)(0x6835F531)
-I (..\ENG\UI\ui_g.h)(0x6835F531)
+I (..\ENG\UI\ui_g.h)(0x6886FF50)
 I (..\USB_DEVICE\App\usbd_cdc_if.h)(0x682339B9)
 I (..\Middlewares\ST\STM32_USB_Device_Library\Class\CDC\Inc\usbd_cdc.h)(0x680B4801)
 I (..\Middlewares\ST\STM32_USB_Device_Library\Core\Inc\usbd_ioreq.h)(0x680B4801)
@@ -1659,15 +1659,15 @@ I (..\ENG\Inc\moto.h)(0x682339B9)
 I (..\ENG\Inc\MTMotoDriver.h)(0x686B8013)
 I (..\ENG\Inc\PID.h)(0x682339B9)
 I (..\ENG\Inc\bsp_can.h)(0x682339B9)
-I (..\ENG\Inc\bsp_uart.h)(0x686A6EBB)
-I (..\ENG\Inc\modes.h)(0x68373155)
+I (..\ENG\Inc\bsp_uart.h)(0x6880D988)
+I (..\ENG\Inc\modes.h)(0x687CB682)
 I (..\ENG\Inc\RcDriver.h)(0x682339B9)
 I (..\ENG\Inc\Key.h)(0x682339B9)
 I (..\ENG\Inc\chassis.h)(0x682339B9)
 I (..\ENG\Inc\wd.h)(0x682339B9)
 I (..\ENG\Inc\lift_moto_ctrl.h)(0x6875C967)
 I (..\ENG\Inc\Arm_Whole_Ctrl.h)(0x682339B9)
-I (..\ENG\Inc\relay.h)(0x682339B9)
+I (..\ENG\Inc\relay.h)(0x6880DA88)
 I (..\ENG\Inc\SelfCheck_Task.h)(0x682339B9)
 F (..\ENG\Src\CRC8_CRC16.c)(0x682339B9)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O3 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../ENG/Inc -I ../ENG/Src -I ../ENG/UI -I ../Middlewares/ST/ARM/DSP/Lib -I ../Middlewares/ST/ARM/DSP/Inc -I ../USB_DEVICE/App -I ../USB_DEVICE/Target -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc-I./RTE/_ENG_2025_1-ID:/keil/pack/ARM/CMSIS/6.1.0/CMSIS/Core/Include-D__UVISION_VERSION="542" -DSTM32F427xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F427xx-o eng_2025_1/crc8_crc16.o -MMD)
 I (..\ENG\Inc\crc8_crc16.h)(0x682339B9)
@@ -1700,8 +1700,8 @@ I (..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_uart.h)(0x680B4800)
 I (..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_pcd.h)(0x680B4800)
 I (..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_usb.h)(0x680B4800)
 I (..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_pcd_ex.h)(0x680B4800)
-F (..\ENG\Src\Relay.c)(0x6835F884)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O3 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../ENG/Inc -I ../ENG/Src -I ../ENG/UI -I ../Middlewares/ST/ARM/DSP/Lib -I ../Middlewares/ST/ARM/DSP/Inc -I ../USB_DEVICE/App -I ../USB_DEVICE/Target -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc-I./RTE/_ENG_2025_1-ID:/keil/pack/ARM/CMSIS/6.1.0/CMSIS/Core/Include-D__UVISION_VERSION="542" -DSTM32F427xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F427xx-o eng_2025_1/relay.o -MMD)
-I (..\ENG\Inc\relay.h)(0x682339B9)
+F (..\ENG\Src\Relay.c)(0x6880DA88)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O3 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../ENG/Inc -I ../ENG/Src -I ../ENG/UI -I ../Middlewares/ST/ARM/DSP/Lib -I ../Middlewares/ST/ARM/DSP/Inc -I ../USB_DEVICE/App -I ../USB_DEVICE/Target -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc-I./RTE/_ENG_2025_1-ID:/keil/pack/ARM/CMSIS/6.1.0/CMSIS/Core/Include-D__UVISION_VERSION="542" -DSTM32F427xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F427xx-o eng_2025_1/relay.o -MMD)
+I (..\ENG\Inc\relay.h)(0x6880DA88)
 I (..\Core\Inc\main.h)(0x682339B9)
 I (..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal.h)(0x680B4800)
 I (..\Core\Inc\stm32f4xx_hal_conf.h)(0x682339B9)
@@ -1731,7 +1731,61 @@ I (..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_uart.h)(0x680B4800)
 I (..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_pcd.h)(0x680B4800)
 I (..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_usb.h)(0x680B4800)
 I (..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_pcd_ex.h)(0x680B4800)
-F (..\ENG\Inc\Relay.h)(0x682339B9)()
+I (..\ENG\Inc\Includes.h)(0x686A6AAC)
+I (..\Core\Inc\tim.h)(0x686A69A0)
+I (..\Core\Inc\usart.h)(0x682339B9)
+I (..\Core\Inc\gpio.h)(0x682339B9)
+I (..\Core\Inc\can.h)(0x682339B9)
+I (..\Core\Inc\dma.h)(0x682339B9)
+I (..\Middlewares\Third_Party\FreeRTOS\Source\include\FreeRTOS.h)(0x680B47BF)
+I (..\Core\Inc\FreeRTOSConfig.h)(0x682339B9)
+I (..\Middlewares\Third_Party\FreeRTOS\Source\include\projdefs.h)(0x680B47BF)
+I (..\Middlewares\Third_Party\FreeRTOS\Source\include\portable.h)(0x680B47BF)
+I (..\Middlewares\Third_Party\FreeRTOS\Source\include\deprecated_definitions.h)(0x680B47BF)
+I (..\Middlewares\Third_Party\FreeRTOS\Source\portable\RVDS\ARM_CM4F\portmacro.h)(0x680B47BF)
+I (..\Middlewares\Third_Party\FreeRTOS\Source\include\mpu_wrappers.h)(0x680B47BF)
+I (..\Middlewares\Third_Party\FreeRTOS\Source\CMSIS_RTOS_V2\cmsis_os.h)(0x680B47BF)
+I (..\Middlewares\Third_Party\FreeRTOS\Source\include\task.h)(0x680B47BF)
+I (..\Middlewares\Third_Party\FreeRTOS\Source\include\list.h)(0x680B47BF)
+I (..\Middlewares\Third_Party\FreeRTOS\Source\CMSIS_RTOS_V2\cmsis_os2.h)(0x680B47BF)
+I (..\Middlewares\ST\ARM\DSP\Inc\arm_math.h)(0x682339B9)
+I (..\Drivers\CMSIS\Include\cmsis_compiler.h)(0x680B47BD)
+I (..\ENG\Inc\struct_typedef.h)(0x682339B9)
+I (..\ENG\Inc\crc8_crc16.h)(0x682339B9)
+I (..\ENG\Inc\crc.h)(0x682339B9)
+I (..\ENG\Inc\protocol.h)(0x68260215)
+I (..\ENG\UI\ui.h)(0x6886FFFD)
+I (..\ENG\UI\ui_interface.h)(0x6835F83A)
+I (..\ENG\UI\ui_types.h)(0x6835F531)
+I (..\ENG\UI\ui_g.h)(0x6886FF50)
+I (..\USB_DEVICE\App\usbd_cdc_if.h)(0x682339B9)
+I (..\Middlewares\ST\STM32_USB_Device_Library\Class\CDC\Inc\usbd_cdc.h)(0x680B4801)
+I (..\Middlewares\ST\STM32_USB_Device_Library\Core\Inc\usbd_ioreq.h)(0x680B4801)
+I (..\Middlewares\ST\STM32_USB_Device_Library\Core\Inc\usbd_def.h)(0x680B4801)
+I (..\USB_DEVICE\Target\usbd_conf.h)(0x682339B9)
+I (..\Middlewares\ST\STM32_USB_Device_Library\Core\Inc\usbd_core.h)(0x680B4801)
+I (..\Middlewares\ST\STM32_USB_Device_Library\Core\Inc\usbd_ctlreq.h)(0x680B4801)
+I (..\USB_DEVICE\App\usbd_desc.h)(0x682339B9)
+I (..\USB_DEVICE\App\usb_device.h)(0x682339B9)
+I (..\ENG\Inc\robot_message.h)(0x682F1B17)
+I (..\ENG\Inc\bsp_usb.h)(0x682339B9)
+I (..\ENG\Inc\pwm.h)(0x6875CB94)
+I (..\ENG\Inc\time.h)(0x682339B9)
+I (..\ENG\Inc\moto.h)(0x682339B9)
+I (..\ENG\Inc\MTMotoDriver.h)(0x686B8013)
+I (..\ENG\Inc\PID.h)(0x682339B9)
+I (..\ENG\Inc\bsp_can.h)(0x682339B9)
+I (..\ENG\Inc\bsp_uart.h)(0x6880D988)
+I (..\ENG\Inc\modes.h)(0x687CB682)
+I (..\ENG\Inc\RcDriver.h)(0x682339B9)
+I (..\ENG\Inc\Key.h)(0x682339B9)
+I (..\ENG\Inc\chassis.h)(0x682339B9)
+I (..\ENG\Inc\referee.h)(0x68878E48)
+I (..\ENG\Inc\wd.h)(0x682339B9)
+I (..\ENG\Inc\lift_moto_ctrl.h)(0x6875C967)
+I (..\ENG\Inc\Arm_Whole_Ctrl.h)(0x682339B9)
+I (..\ENG\Inc\SelfCheck_Task.h)(0x682339B9)
+F (..\ENG\Inc\Relay.h)(0x6880DA88)()
 F (..\ENG\Src\robot_message.c)(0x68357CBB)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O3 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../ENG/Inc -I ../ENG/Src -I ../ENG/UI -I ../Middlewares/ST/ARM/DSP/Lib -I ../Middlewares/ST/ARM/DSP/Inc -I ../USB_DEVICE/App -I ../USB_DEVICE/Target -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc-I./RTE/_ENG_2025_1-ID:/keil/pack/ARM/CMSIS/6.1.0/CMSIS/Core/Include-D__UVISION_VERSION="542" -DSTM32F427xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F427xx-o eng_2025_1/robot_message.o -MMD)
 I (..\ENG\Inc\robot_message.h)(0x682F1B17)
 I (..\ENG\Inc\struct_typedef.h)(0x682339B9)
@@ -1812,7 +1866,7 @@ I (..\Middlewares\ST\STM32_USB_Device_Library\Class\CDC\Inc\usbd_cdc.h)(0x680B48
 I (..\Middlewares\ST\STM32_USB_Device_Library\Core\Inc\usbd_ioreq.h)(0x680B4801)
 I (..\Middlewares\ST\STM32_USB_Device_Library\Core\Inc\usbd_core.h)(0x680B4801)
 I (..\Middlewares\ST\STM32_USB_Device_Library\Core\Inc\usbd_ctlreq.h)(0x680B4801)
-F (..\ENG\Src\SelfCheck_Task.c)(0x68762F73)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O3 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../ENG/Inc -I ../ENG/Src -I ../ENG/UI -I ../Middlewares/ST/ARM/DSP/Lib -I ../Middlewares/ST/ARM/DSP/Inc -I ../USB_DEVICE/App -I ../USB_DEVICE/Target -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc-I./RTE/_ENG_2025_1-ID:/keil/pack/ARM/CMSIS/6.1.0/CMSIS/Core/Include-D__UVISION_VERSION="542" -DSTM32F427xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F427xx-o eng_2025_1/selfcheck_task.o -MMD)
+F (..\ENG\Src\SelfCheck_Task.c)(0x6888EDD0)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O3 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../ENG/Inc -I ../ENG/Src -I ../ENG/UI -I ../Middlewares/ST/ARM/DSP/Lib -I ../Middlewares/ST/ARM/DSP/Inc -I ../USB_DEVICE/App -I ../USB_DEVICE/Target -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc-I./RTE/_ENG_2025_1-ID:/keil/pack/ARM/CMSIS/6.1.0/CMSIS/Core/Include-D__UVISION_VERSION="542" -DSTM32F427xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F427xx-o eng_2025_1/selfcheck_task.o -MMD)
 I (..\ENG\Inc\SelfCheck_Task.h)(0x682339B9)
 I (..\ENG\Inc\Includes.h)(0x686A6AAC)
 I (..\Core\Inc\main.h)(0x682339B9)
@@ -1866,10 +1920,10 @@ I (..\ENG\Inc\struct_typedef.h)(0x682339B9)
 I (..\ENG\Inc\crc8_crc16.h)(0x682339B9)
 I (..\ENG\Inc\crc.h)(0x682339B9)
 I (..\ENG\Inc\protocol.h)(0x68260215)
-I (..\ENG\UI\ui.h)(0x6835F531)
+I (..\ENG\UI\ui.h)(0x6886FFFD)
 I (..\ENG\UI\ui_interface.h)(0x6835F83A)
 I (..\ENG\UI\ui_types.h)(0x6835F531)
-I (..\ENG\UI\ui_g.h)(0x6835F531)
+I (..\ENG\UI\ui_g.h)(0x6886FF50)
 I (..\USB_DEVICE\App\usbd_cdc_if.h)(0x682339B9)
 I (..\Middlewares\ST\STM32_USB_Device_Library\Class\CDC\Inc\usbd_cdc.h)(0x680B4801)
 I (..\Middlewares\ST\STM32_USB_Device_Library\Core\Inc\usbd_ioreq.h)(0x680B4801)
@@ -1887,18 +1941,18 @@ I (..\ENG\Inc\moto.h)(0x682339B9)
 I (..\ENG\Inc\MTMotoDriver.h)(0x686B8013)
 I (..\ENG\Inc\PID.h)(0x682339B9)
 I (..\ENG\Inc\bsp_can.h)(0x682339B9)
-I (..\ENG\Inc\bsp_uart.h)(0x686A6EBB)
-I (..\ENG\Inc\modes.h)(0x68373155)
+I (..\ENG\Inc\bsp_uart.h)(0x6880D988)
+I (..\ENG\Inc\modes.h)(0x687CB682)
 I (..\ENG\Inc\RcDriver.h)(0x682339B9)
 I (..\ENG\Inc\Key.h)(0x682339B9)
 I (..\ENG\Inc\chassis.h)(0x682339B9)
-I (..\ENG\Inc\referee.h)(0x68348A3D)
+I (..\ENG\Inc\referee.h)(0x68878E48)
 I (..\ENG\Inc\wd.h)(0x682339B9)
 I (..\ENG\Inc\lift_moto_ctrl.h)(0x6875C967)
 I (..\ENG\Inc\Arm_Whole_Ctrl.h)(0x682339B9)
-I (..\ENG\Inc\relay.h)(0x682339B9)
-F (..\ENG\Src\bsp_uart.c)(0x686A6EE9)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O3 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../ENG/Inc -I ../ENG/Src -I ../ENG/UI -I ../Middlewares/ST/ARM/DSP/Lib -I ../Middlewares/ST/ARM/DSP/Inc -I ../USB_DEVICE/App -I ../USB_DEVICE/Target -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc-I./RTE/_ENG_2025_1-ID:/keil/pack/ARM/CMSIS/6.1.0/CMSIS/Core/Include-D__UVISION_VERSION="542" -DSTM32F427xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F427xx-o eng_2025_1/bsp_uart.o -MMD)
-I (..\ENG\Inc\bsp_uart.h)(0x686A6EBB)
+I (..\ENG\Inc\relay.h)(0x6880DA88)
+F (..\ENG\Src\bsp_uart.c)(0x6880DA88)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O3 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../ENG/Inc -I ../ENG/Src -I ../ENG/UI -I ../Middlewares/ST/ARM/DSP/Lib -I ../Middlewares/ST/ARM/DSP/Inc -I ../USB_DEVICE/App -I ../USB_DEVICE/Target -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc-I./RTE/_ENG_2025_1-ID:/keil/pack/ARM/CMSIS/6.1.0/CMSIS/Core/Include-D__UVISION_VERSION="542" -DSTM32F427xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F427xx-o eng_2025_1/bsp_uart.o -MMD)
+I (..\ENG\Inc\bsp_uart.h)(0x6880D988)
 I (..\ENG\Inc\Includes.h)(0x686A6AAC)
 I (..\Core\Inc\main.h)(0x682339B9)
 I (..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal.h)(0x680B4800)
@@ -1951,10 +2005,10 @@ I (..\ENG\Inc\struct_typedef.h)(0x682339B9)
 I (..\ENG\Inc\crc8_crc16.h)(0x682339B9)
 I (..\ENG\Inc\crc.h)(0x682339B9)
 I (..\ENG\Inc\protocol.h)(0x68260215)
-I (..\ENG\UI\ui.h)(0x6835F531)
+I (..\ENG\UI\ui.h)(0x6886FFFD)
 I (..\ENG\UI\ui_interface.h)(0x6835F83A)
 I (..\ENG\UI\ui_types.h)(0x6835F531)
-I (..\ENG\UI\ui_g.h)(0x6835F531)
+I (..\ENG\UI\ui_g.h)(0x6886FF50)
 I (..\USB_DEVICE\App\usbd_cdc_if.h)(0x682339B9)
 I (..\Middlewares\ST\STM32_USB_Device_Library\Class\CDC\Inc\usbd_cdc.h)(0x680B4801)
 I (..\Middlewares\ST\STM32_USB_Device_Library\Core\Inc\usbd_ioreq.h)(0x680B4801)
@@ -1972,15 +2026,15 @@ I (..\ENG\Inc\moto.h)(0x682339B9)
 I (..\ENG\Inc\MTMotoDriver.h)(0x686B8013)
 I (..\ENG\Inc\PID.h)(0x682339B9)
 I (..\ENG\Inc\bsp_can.h)(0x682339B9)
-I (..\ENG\Inc\modes.h)(0x68373155)
+I (..\ENG\Inc\modes.h)(0x687CB682)
 I (..\ENG\Inc\RcDriver.h)(0x682339B9)
 I (..\ENG\Inc\Key.h)(0x682339B9)
 I (..\ENG\Inc\chassis.h)(0x682339B9)
-I (..\ENG\Inc\referee.h)(0x68348A3D)
+I (..\ENG\Inc\referee.h)(0x68878E48)
 I (..\ENG\Inc\wd.h)(0x682339B9)
 I (..\ENG\Inc\lift_moto_ctrl.h)(0x6875C967)
 I (..\ENG\Inc\Arm_Whole_Ctrl.h)(0x682339B9)
-I (..\ENG\Inc\relay.h)(0x682339B9)
+I (..\ENG\Inc\relay.h)(0x6880DA88)
 I (..\ENG\Inc\SelfCheck_Task.h)(0x682339B9)
 F (..\ENG\Src\pwm.c)(0x6875E7A9)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O3 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../ENG/Inc -I ../ENG/Src -I ../ENG/UI -I ../Middlewares/ST/ARM/DSP/Lib -I ../Middlewares/ST/ARM/DSP/Inc -I ../USB_DEVICE/App -I ../USB_DEVICE/Target -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc-I./RTE/_ENG_2025_1-ID:/keil/pack/ARM/CMSIS/6.1.0/CMSIS/Core/Include-D__UVISION_VERSION="542" -DSTM32F427xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F427xx-o eng_2025_1/pwm.o -MMD)
 I (..\ENG\Inc\pwm.h)(0x6875CB94)
@@ -2066,10 +2120,10 @@ I (..\ENG\Inc\struct_typedef.h)(0x682339B9)
 I (..\ENG\Inc\crc8_crc16.h)(0x682339B9)
 I (..\ENG\Inc\crc.h)(0x682339B9)
 I (..\ENG\Inc\protocol.h)(0x68260215)
-I (..\ENG\UI\ui.h)(0x6835F531)
+I (..\ENG\UI\ui.h)(0x6886FFFD)
 I (..\ENG\UI\ui_interface.h)(0x6835F83A)
 I (..\ENG\UI\ui_types.h)(0x6835F531)
-I (..\ENG\UI\ui_g.h)(0x6835F531)
+I (..\ENG\UI\ui_g.h)(0x6886FF50)
 I (..\USB_DEVICE\App\usbd_cdc_if.h)(0x682339B9)
 I (..\Middlewares\ST\STM32_USB_Device_Library\Class\CDC\Inc\usbd_cdc.h)(0x680B4801)
 I (..\Middlewares\ST\STM32_USB_Device_Library\Core\Inc\usbd_ioreq.h)(0x680B4801)
@@ -2087,16 +2141,16 @@ I (..\ENG\Inc\moto.h)(0x682339B9)
 I (..\ENG\Inc\MTMotoDriver.h)(0x686B8013)
 I (..\ENG\Inc\PID.h)(0x682339B9)
 I (..\ENG\Inc\bsp_can.h)(0x682339B9)
-I (..\ENG\Inc\bsp_uart.h)(0x686A6EBB)
-I (..\ENG\Inc\modes.h)(0x68373155)
+I (..\ENG\Inc\bsp_uart.h)(0x6880D988)
+I (..\ENG\Inc\modes.h)(0x687CB682)
 I (..\ENG\Inc\RcDriver.h)(0x682339B9)
 I (..\ENG\Inc\Key.h)(0x682339B9)
 I (..\ENG\Inc\chassis.h)(0x682339B9)
-I (..\ENG\Inc\referee.h)(0x68348A3D)
+I (..\ENG\Inc\referee.h)(0x68878E48)
 I (..\ENG\Inc\wd.h)(0x682339B9)
 I (..\ENG\Inc\lift_moto_ctrl.h)(0x6875C967)
 I (..\ENG\Inc\Arm_Whole_Ctrl.h)(0x682339B9)
-I (..\ENG\Inc\relay.h)(0x682339B9)
+I (..\ENG\Inc\relay.h)(0x6880DA88)
 I (..\ENG\Inc\SelfCheck_Task.h)(0x682339B9)
 F (..\ENG\Src\moto.c)(0x686B8015)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O3 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../ENG/Inc -I ../ENG/Src -I ../ENG/UI -I ../Middlewares/ST/ARM/DSP/Lib -I ../Middlewares/ST/ARM/DSP/Inc -I ../USB_DEVICE/App -I ../USB_DEVICE/Target -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc-I./RTE/_ENG_2025_1-ID:/keil/pack/ARM/CMSIS/6.1.0/CMSIS/Core/Include-D__UVISION_VERSION="542" -DSTM32F427xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F427xx-o eng_2025_1/moto.o -MMD)
 I (..\ENG\Inc\moto.h)(0x682339B9)
@@ -2152,10 +2206,10 @@ I (..\ENG\Inc\struct_typedef.h)(0x682339B9)
 I (..\ENG\Inc\crc8_crc16.h)(0x682339B9)
 I (..\ENG\Inc\crc.h)(0x682339B9)
 I (..\ENG\Inc\protocol.h)(0x68260215)
-I (..\ENG\UI\ui.h)(0x6835F531)
+I (..\ENG\UI\ui.h)(0x6886FFFD)
 I (..\ENG\UI\ui_interface.h)(0x6835F83A)
 I (..\ENG\UI\ui_types.h)(0x6835F531)
-I (..\ENG\UI\ui_g.h)(0x6835F531)
+I (..\ENG\UI\ui_g.h)(0x6886FF50)
 I (..\USB_DEVICE\App\usbd_cdc_if.h)(0x682339B9)
 I (..\Middlewares\ST\STM32_USB_Device_Library\Class\CDC\Inc\usbd_cdc.h)(0x680B4801)
 I (..\Middlewares\ST\STM32_USB_Device_Library\Core\Inc\usbd_ioreq.h)(0x680B4801)
@@ -2172,18 +2226,18 @@ I (..\ENG\Inc\time.h)(0x682339B9)
 I (..\ENG\Inc\MTMotoDriver.h)(0x686B8013)
 I (..\ENG\Inc\PID.h)(0x682339B9)
 I (..\ENG\Inc\bsp_can.h)(0x682339B9)
-I (..\ENG\Inc\bsp_uart.h)(0x686A6EBB)
-I (..\ENG\Inc\modes.h)(0x68373155)
+I (..\ENG\Inc\bsp_uart.h)(0x6880D988)
+I (..\ENG\Inc\modes.h)(0x687CB682)
 I (..\ENG\Inc\RcDriver.h)(0x682339B9)
 I (..\ENG\Inc\Key.h)(0x682339B9)
 I (..\ENG\Inc\chassis.h)(0x682339B9)
-I (..\ENG\Inc\referee.h)(0x68348A3D)
+I (..\ENG\Inc\referee.h)(0x68878E48)
 I (..\ENG\Inc\wd.h)(0x682339B9)
 I (..\ENG\Inc\lift_moto_ctrl.h)(0x6875C967)
 I (..\ENG\Inc\Arm_Whole_Ctrl.h)(0x682339B9)
-I (..\ENG\Inc\relay.h)(0x682339B9)
+I (..\ENG\Inc\relay.h)(0x6880DA88)
 I (..\ENG\Inc\SelfCheck_Task.h)(0x682339B9)
-F (..\ENG\Src\chassis.c)(0x686B820B)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O3 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../ENG/Inc -I ../ENG/Src -I ../ENG/UI -I ../Middlewares/ST/ARM/DSP/Lib -I ../Middlewares/ST/ARM/DSP/Inc -I ../USB_DEVICE/App -I ../USB_DEVICE/Target -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc-I./RTE/_ENG_2025_1-ID:/keil/pack/ARM/CMSIS/6.1.0/CMSIS/Core/Include-D__UVISION_VERSION="542" -DSTM32F427xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F427xx-o eng_2025_1/chassis.o -MMD)
+F (..\ENG\Src\chassis.c)(0x68862C61)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O3 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../ENG/Inc -I ../ENG/Src -I ../ENG/UI -I ../Middlewares/ST/ARM/DSP/Lib -I ../Middlewares/ST/ARM/DSP/Inc -I ../USB_DEVICE/App -I ../USB_DEVICE/Target -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc-I./RTE/_ENG_2025_1-ID:/keil/pack/ARM/CMSIS/6.1.0/CMSIS/Core/Include-D__UVISION_VERSION="542" -DSTM32F427xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F427xx-o eng_2025_1/chassis.o -MMD)
 I (..\ENG\Inc\chassis.h)(0x682339B9)
 I (..\ENG\Inc\Includes.h)(0x686A6AAC)
 I (..\Core\Inc\main.h)(0x682339B9)
@@ -2237,10 +2291,10 @@ I (..\ENG\Inc\struct_typedef.h)(0x682339B9)
 I (..\ENG\Inc\crc8_crc16.h)(0x682339B9)
 I (..\ENG\Inc\crc.h)(0x682339B9)
 I (..\ENG\Inc\protocol.h)(0x68260215)
-I (..\ENG\UI\ui.h)(0x6835F531)
+I (..\ENG\UI\ui.h)(0x6886FFFD)
 I (..\ENG\UI\ui_interface.h)(0x6835F83A)
 I (..\ENG\UI\ui_types.h)(0x6835F531)
-I (..\ENG\UI\ui_g.h)(0x6835F531)
+I (..\ENG\UI\ui_g.h)(0x6886FF50)
 I (..\USB_DEVICE\App\usbd_cdc_if.h)(0x682339B9)
 I (..\Middlewares\ST\STM32_USB_Device_Library\Class\CDC\Inc\usbd_cdc.h)(0x680B4801)
 I (..\Middlewares\ST\STM32_USB_Device_Library\Core\Inc\usbd_ioreq.h)(0x680B4801)
@@ -2258,17 +2312,17 @@ I (..\ENG\Inc\moto.h)(0x682339B9)
 I (..\ENG\Inc\MTMotoDriver.h)(0x686B8013)
 I (..\ENG\Inc\PID.h)(0x682339B9)
 I (..\ENG\Inc\bsp_can.h)(0x682339B9)
-I (..\ENG\Inc\bsp_uart.h)(0x686A6EBB)
-I (..\ENG\Inc\modes.h)(0x68373155)
+I (..\ENG\Inc\bsp_uart.h)(0x6880D988)
+I (..\ENG\Inc\modes.h)(0x687CB682)
 I (..\ENG\Inc\RcDriver.h)(0x682339B9)
 I (..\ENG\Inc\Key.h)(0x682339B9)
-I (..\ENG\Inc\referee.h)(0x68348A3D)
+I (..\ENG\Inc\referee.h)(0x68878E48)
 I (..\ENG\Inc\wd.h)(0x682339B9)
 I (..\ENG\Inc\lift_moto_ctrl.h)(0x6875C967)
 I (..\ENG\Inc\Arm_Whole_Ctrl.h)(0x682339B9)
-I (..\ENG\Inc\relay.h)(0x682339B9)
+I (..\ENG\Inc\relay.h)(0x6880DA88)
 I (..\ENG\Inc\SelfCheck_Task.h)(0x682339B9)
-F (..\ENG\Src\lift_moto_ctrl.c)(0x6875C967)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O3 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../ENG/Inc -I ../ENG/Src -I ../ENG/UI -I ../Middlewares/ST/ARM/DSP/Lib -I ../Middlewares/ST/ARM/DSP/Inc -I ../USB_DEVICE/App -I ../USB_DEVICE/Target -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc-I./RTE/_ENG_2025_1-ID:/keil/pack/ARM/CMSIS/6.1.0/CMSIS/Core/Include-D__UVISION_VERSION="542" -DSTM32F427xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F427xx-o eng_2025_1/lift_moto_ctrl.o -MMD)
+F (..\ENG\Src\lift_moto_ctrl.c)(0x6884D7EB)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O3 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../ENG/Inc -I ../ENG/Src -I ../ENG/UI -I ../Middlewares/ST/ARM/DSP/Lib -I ../Middlewares/ST/ARM/DSP/Inc -I ../USB_DEVICE/App -I ../USB_DEVICE/Target -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc-I./RTE/_ENG_2025_1-ID:/keil/pack/ARM/CMSIS/6.1.0/CMSIS/Core/Include-D__UVISION_VERSION="542" -DSTM32F427xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F427xx-o eng_2025_1/lift_moto_ctrl.o -MMD)
 I (..\ENG\Inc\lift_moto_ctrl.h)(0x6875C967)
 I (..\ENG\Inc\Includes.h)(0x686A6AAC)
 I (..\Core\Inc\main.h)(0x682339B9)
@@ -2322,10 +2376,10 @@ I (..\ENG\Inc\struct_typedef.h)(0x682339B9)
 I (..\ENG\Inc\crc8_crc16.h)(0x682339B9)
 I (..\ENG\Inc\crc.h)(0x682339B9)
 I (..\ENG\Inc\protocol.h)(0x68260215)
-I (..\ENG\UI\ui.h)(0x6835F531)
+I (..\ENG\UI\ui.h)(0x6886FFFD)
 I (..\ENG\UI\ui_interface.h)(0x6835F83A)
 I (..\ENG\UI\ui_types.h)(0x6835F531)
-I (..\ENG\UI\ui_g.h)(0x6835F531)
+I (..\ENG\UI\ui_g.h)(0x6886FF50)
 I (..\USB_DEVICE\App\usbd_cdc_if.h)(0x682339B9)
 I (..\Middlewares\ST\STM32_USB_Device_Library\Class\CDC\Inc\usbd_cdc.h)(0x680B4801)
 I (..\Middlewares\ST\STM32_USB_Device_Library\Core\Inc\usbd_ioreq.h)(0x680B4801)
@@ -2343,17 +2397,17 @@ I (..\ENG\Inc\moto.h)(0x682339B9)
 I (..\ENG\Inc\MTMotoDriver.h)(0x686B8013)
 I (..\ENG\Inc\PID.h)(0x682339B9)
 I (..\ENG\Inc\bsp_can.h)(0x682339B9)
-I (..\ENG\Inc\bsp_uart.h)(0x686A6EBB)
-I (..\ENG\Inc\modes.h)(0x68373155)
+I (..\ENG\Inc\bsp_uart.h)(0x6880D988)
+I (..\ENG\Inc\modes.h)(0x687CB682)
 I (..\ENG\Inc\RcDriver.h)(0x682339B9)
 I (..\ENG\Inc\Key.h)(0x682339B9)
 I (..\ENG\Inc\chassis.h)(0x682339B9)
-I (..\ENG\Inc\referee.h)(0x68348A3D)
+I (..\ENG\Inc\referee.h)(0x68878E48)
 I (..\ENG\Inc\wd.h)(0x682339B9)
 I (..\ENG\Inc\Arm_Whole_Ctrl.h)(0x682339B9)
-I (..\ENG\Inc\relay.h)(0x682339B9)
+I (..\ENG\Inc\relay.h)(0x6880DA88)
 I (..\ENG\Inc\SelfCheck_Task.h)(0x682339B9)
-F (..\ENG\Src\Arm_Whole_Ctrl.c)(0x6837D399)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O3 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../ENG/Inc -I ../ENG/Src -I ../ENG/UI -I ../Middlewares/ST/ARM/DSP/Lib -I ../Middlewares/ST/ARM/DSP/Inc -I ../USB_DEVICE/App -I ../USB_DEVICE/Target -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc-I./RTE/_ENG_2025_1-ID:/keil/pack/ARM/CMSIS/6.1.0/CMSIS/Core/Include-D__UVISION_VERSION="542" -DSTM32F427xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F427xx-o eng_2025_1/arm_whole_ctrl.o -MMD)
+F (..\ENG\Src\Arm_Whole_Ctrl.c)(0x6885D28E)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O3 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../ENG/Inc -I ../ENG/Src -I ../ENG/UI -I ../Middlewares/ST/ARM/DSP/Lib -I ../Middlewares/ST/ARM/DSP/Inc -I ../USB_DEVICE/App -I ../USB_DEVICE/Target -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc-I./RTE/_ENG_2025_1-ID:/keil/pack/ARM/CMSIS/6.1.0/CMSIS/Core/Include-D__UVISION_VERSION="542" -DSTM32F427xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F427xx-o eng_2025_1/arm_whole_ctrl.o -MMD)
 I (..\ENG\Inc\Arm_Whole_Ctrl.h)(0x682339B9)
 I (..\ENG\Inc\Includes.h)(0x686A6AAC)
 I (..\Core\Inc\main.h)(0x682339B9)
@@ -2407,10 +2461,10 @@ I (..\ENG\Inc\struct_typedef.h)(0x682339B9)
 I (..\ENG\Inc\crc8_crc16.h)(0x682339B9)
 I (..\ENG\Inc\crc.h)(0x682339B9)
 I (..\ENG\Inc\protocol.h)(0x68260215)
-I (..\ENG\UI\ui.h)(0x6835F531)
+I (..\ENG\UI\ui.h)(0x6886FFFD)
 I (..\ENG\UI\ui_interface.h)(0x6835F83A)
 I (..\ENG\UI\ui_types.h)(0x6835F531)
-I (..\ENG\UI\ui_g.h)(0x6835F531)
+I (..\ENG\UI\ui_g.h)(0x6886FF50)
 I (..\USB_DEVICE\App\usbd_cdc_if.h)(0x682339B9)
 I (..\Middlewares\ST\STM32_USB_Device_Library\Class\CDC\Inc\usbd_cdc.h)(0x680B4801)
 I (..\Middlewares\ST\STM32_USB_Device_Library\Core\Inc\usbd_ioreq.h)(0x680B4801)
@@ -2428,15 +2482,15 @@ I (..\ENG\Inc\moto.h)(0x682339B9)
 I (..\ENG\Inc\MTMotoDriver.h)(0x686B8013)
 I (..\ENG\Inc\PID.h)(0x682339B9)
 I (..\ENG\Inc\bsp_can.h)(0x682339B9)
-I (..\ENG\Inc\bsp_uart.h)(0x686A6EBB)
-I (..\ENG\Inc\modes.h)(0x68373155)
+I (..\ENG\Inc\bsp_uart.h)(0x6880D988)
+I (..\ENG\Inc\modes.h)(0x687CB682)
 I (..\ENG\Inc\RcDriver.h)(0x682339B9)
 I (..\ENG\Inc\Key.h)(0x682339B9)
 I (..\ENG\Inc\chassis.h)(0x682339B9)
-I (..\ENG\Inc\referee.h)(0x68348A3D)
+I (..\ENG\Inc\referee.h)(0x68878E48)
 I (..\ENG\Inc\wd.h)(0x682339B9)
 I (..\ENG\Inc\lift_moto_ctrl.h)(0x6875C967)
-I (..\ENG\Inc\relay.h)(0x682339B9)
+I (..\ENG\Inc\relay.h)(0x6880DA88)
 I (..\ENG\Inc\SelfCheck_Task.h)(0x682339B9)
 F (..\ENG\Inc\Arm_Whole_Ctrl.h)(0x682339B9)()
 F (..\ENG\Src\MTMotoDriver.c)(0x686B8015)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O3 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../ENG/Inc -I ../ENG/Src -I ../ENG/UI -I ../Middlewares/ST/ARM/DSP/Lib -I ../Middlewares/ST/ARM/DSP/Inc -I ../USB_DEVICE/App -I ../USB_DEVICE/Target -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc-I./RTE/_ENG_2025_1-ID:/keil/pack/ARM/CMSIS/6.1.0/CMSIS/Core/Include-D__UVISION_VERSION="542" -DSTM32F427xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F427xx-o eng_2025_1/mtmotodriver.o -MMD)
@@ -2493,10 +2547,10 @@ I (..\ENG\Inc\struct_typedef.h)(0x682339B9)
 I (..\ENG\Inc\crc8_crc16.h)(0x682339B9)
 I (..\ENG\Inc\crc.h)(0x682339B9)
 I (..\ENG\Inc\protocol.h)(0x68260215)
-I (..\ENG\UI\ui.h)(0x6835F531)
+I (..\ENG\UI\ui.h)(0x6886FFFD)
 I (..\ENG\UI\ui_interface.h)(0x6835F83A)
 I (..\ENG\UI\ui_types.h)(0x6835F531)
-I (..\ENG\UI\ui_g.h)(0x6835F531)
+I (..\ENG\UI\ui_g.h)(0x6886FF50)
 I (..\USB_DEVICE\App\usbd_cdc_if.h)(0x682339B9)
 I (..\Middlewares\ST\STM32_USB_Device_Library\Class\CDC\Inc\usbd_cdc.h)(0x680B4801)
 I (..\Middlewares\ST\STM32_USB_Device_Library\Core\Inc\usbd_ioreq.h)(0x680B4801)
@@ -2513,20 +2567,20 @@ I (..\ENG\Inc\time.h)(0x682339B9)
 I (..\ENG\Inc\moto.h)(0x682339B9)
 I (..\ENG\Inc\PID.h)(0x682339B9)
 I (..\ENG\Inc\bsp_can.h)(0x682339B9)
-I (..\ENG\Inc\bsp_uart.h)(0x686A6EBB)
-I (..\ENG\Inc\modes.h)(0x68373155)
+I (..\ENG\Inc\bsp_uart.h)(0x6880D988)
+I (..\ENG\Inc\modes.h)(0x687CB682)
 I (..\ENG\Inc\RcDriver.h)(0x682339B9)
 I (..\ENG\Inc\Key.h)(0x682339B9)
 I (..\ENG\Inc\chassis.h)(0x682339B9)
-I (..\ENG\Inc\referee.h)(0x68348A3D)
+I (..\ENG\Inc\referee.h)(0x68878E48)
 I (..\ENG\Inc\wd.h)(0x682339B9)
 I (..\ENG\Inc\lift_moto_ctrl.h)(0x6875C967)
 I (..\ENG\Inc\Arm_Whole_Ctrl.h)(0x682339B9)
-I (..\ENG\Inc\relay.h)(0x682339B9)
+I (..\ENG\Inc\relay.h)(0x6880DA88)
 I (..\ENG\Inc\SelfCheck_Task.h)(0x682339B9)
 F (..\ENG\Inc\MTMotoDriver.h)(0x686B8013)()
-F (..\ENG\Src\modes.c)(0x68762F73)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O3 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../ENG/Inc -I ../ENG/Src -I ../ENG/UI -I ../Middlewares/ST/ARM/DSP/Lib -I ../Middlewares/ST/ARM/DSP/Inc -I ../USB_DEVICE/App -I ../USB_DEVICE/Target -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc-I./RTE/_ENG_2025_1-ID:/keil/pack/ARM/CMSIS/6.1.0/CMSIS/Core/Include-D__UVISION_VERSION="542" -DSTM32F427xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F427xx-o eng_2025_1/modes.o -MMD)
-I (..\ENG\Inc\modes.h)(0x68373155)
+F (..\ENG\Src\modes.c)(0x688BA121)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O3 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../ENG/Inc -I ../ENG/Src -I ../ENG/UI -I ../Middlewares/ST/ARM/DSP/Lib -I ../Middlewares/ST/ARM/DSP/Inc -I ../USB_DEVICE/App -I ../USB_DEVICE/Target -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc-I./RTE/_ENG_2025_1-ID:/keil/pack/ARM/CMSIS/6.1.0/CMSIS/Core/Include-D__UVISION_VERSION="542" -DSTM32F427xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F427xx-o eng_2025_1/modes.o -MMD)
+I (..\ENG\Inc\modes.h)(0x687CB682)
 I (..\ENG\Inc\Includes.h)(0x686A6AAC)
 I (..\Core\Inc\main.h)(0x682339B9)
 I (..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal.h)(0x680B4800)
@@ -2579,10 +2633,10 @@ I (..\ENG\Inc\struct_typedef.h)(0x682339B9)
 I (..\ENG\Inc\crc8_crc16.h)(0x682339B9)
 I (..\ENG\Inc\crc.h)(0x682339B9)
 I (..\ENG\Inc\protocol.h)(0x68260215)
-I (..\ENG\UI\ui.h)(0x6835F531)
+I (..\ENG\UI\ui.h)(0x6886FFFD)
 I (..\ENG\UI\ui_interface.h)(0x6835F83A)
 I (..\ENG\UI\ui_types.h)(0x6835F531)
-I (..\ENG\UI\ui_g.h)(0x6835F531)
+I (..\ENG\UI\ui_g.h)(0x6886FF50)
 I (..\USB_DEVICE\App\usbd_cdc_if.h)(0x682339B9)
 I (..\Middlewares\ST\STM32_USB_Device_Library\Class\CDC\Inc\usbd_cdc.h)(0x680B4801)
 I (..\Middlewares\ST\STM32_USB_Device_Library\Core\Inc\usbd_ioreq.h)(0x680B4801)
@@ -2600,15 +2654,15 @@ I (..\ENG\Inc\moto.h)(0x682339B9)
 I (..\ENG\Inc\MTMotoDriver.h)(0x686B8013)
 I (..\ENG\Inc\PID.h)(0x682339B9)
 I (..\ENG\Inc\bsp_can.h)(0x682339B9)
-I (..\ENG\Inc\bsp_uart.h)(0x686A6EBB)
+I (..\ENG\Inc\bsp_uart.h)(0x6880D988)
 I (..\ENG\Inc\RcDriver.h)(0x682339B9)
 I (..\ENG\Inc\Key.h)(0x682339B9)
 I (..\ENG\Inc\chassis.h)(0x682339B9)
-I (..\ENG\Inc\referee.h)(0x68348A3D)
+I (..\ENG\Inc\referee.h)(0x68878E48)
 I (..\ENG\Inc\wd.h)(0x682339B9)
 I (..\ENG\Inc\lift_moto_ctrl.h)(0x6875C967)
 I (..\ENG\Inc\Arm_Whole_Ctrl.h)(0x682339B9)
-I (..\ENG\Inc\relay.h)(0x682339B9)
+I (..\ENG\Inc\relay.h)(0x6880DA88)
 I (..\ENG\Inc\SelfCheck_Task.h)(0x682339B9)
 F (..\ENG\Src\Eng_Task.c)(0x6874EC4C)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O3 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../ENG/Inc -I ../ENG/Src -I ../ENG/UI -I ../Middlewares/ST/ARM/DSP/Lib -I ../Middlewares/ST/ARM/DSP/Inc -I ../USB_DEVICE/App -I ../USB_DEVICE/Target -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc-I./RTE/_ENG_2025_1-ID:/keil/pack/ARM/CMSIS/6.1.0/CMSIS/Core/Include-D__UVISION_VERSION="542" -DSTM32F427xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F427xx-o eng_2025_1/eng_task.o -MMD)
 I (..\ENG\Inc\Eng_Task.h)(0x682339B9)
@@ -2664,10 +2718,10 @@ I (..\ENG\Inc\struct_typedef.h)(0x682339B9)
 I (..\ENG\Inc\crc8_crc16.h)(0x682339B9)
 I (..\ENG\Inc\crc.h)(0x682339B9)
 I (..\ENG\Inc\protocol.h)(0x68260215)
-I (..\ENG\UI\ui.h)(0x6835F531)
+I (..\ENG\UI\ui.h)(0x6886FFFD)
 I (..\ENG\UI\ui_interface.h)(0x6835F83A)
 I (..\ENG\UI\ui_types.h)(0x6835F531)
-I (..\ENG\UI\ui_g.h)(0x6835F531)
+I (..\ENG\UI\ui_g.h)(0x6886FF50)
 I (..\USB_DEVICE\App\usbd_cdc_if.h)(0x682339B9)
 I (..\Middlewares\ST\STM32_USB_Device_Library\Class\CDC\Inc\usbd_cdc.h)(0x680B4801)
 I (..\Middlewares\ST\STM32_USB_Device_Library\Core\Inc\usbd_ioreq.h)(0x680B4801)
@@ -2685,21 +2739,21 @@ I (..\ENG\Inc\moto.h)(0x682339B9)
 I (..\ENG\Inc\MTMotoDriver.h)(0x686B8013)
 I (..\ENG\Inc\PID.h)(0x682339B9)
 I (..\ENG\Inc\bsp_can.h)(0x682339B9)
-I (..\ENG\Inc\bsp_uart.h)(0x686A6EBB)
-I (..\ENG\Inc\modes.h)(0x68373155)
+I (..\ENG\Inc\bsp_uart.h)(0x6880D988)
+I (..\ENG\Inc\modes.h)(0x687CB682)
 I (..\ENG\Inc\RcDriver.h)(0x682339B9)
 I (..\ENG\Inc\Key.h)(0x682339B9)
 I (..\ENG\Inc\chassis.h)(0x682339B9)
-I (..\ENG\Inc\referee.h)(0x68348A3D)
+I (..\ENG\Inc\referee.h)(0x68878E48)
 I (..\ENG\Inc\wd.h)(0x682339B9)
 I (..\ENG\Inc\lift_moto_ctrl.h)(0x6875C967)
 I (..\ENG\Inc\Arm_Whole_Ctrl.h)(0x682339B9)
-I (..\ENG\Inc\relay.h)(0x682339B9)
+I (..\ENG\Inc\relay.h)(0x6880DA88)
 I (..\ENG\Inc\SelfCheck_Task.h)(0x682339B9)
 F (..\ENG\Inc\Eng_Task.h)(0x682339B9)()
-F (..\ENG\UI\ui.h)(0x6835F531)()
+F (..\ENG\UI\ui.h)(0x6886FFFD)()
 F (..\ENG\UI\ui_interface.h)(0x6835F83A)()
-F (..\ENG\UI\Referee_UI_Task.c)(0x683D3A8E)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O3 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../ENG/Inc -I ../ENG/Src -I ../ENG/UI -I ../Middlewares/ST/ARM/DSP/Lib -I ../Middlewares/ST/ARM/DSP/Inc -I ../USB_DEVICE/App -I ../USB_DEVICE/Target -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc-I./RTE/_ENG_2025_1-ID:/keil/pack/ARM/CMSIS/6.1.0/CMSIS/Core/Include-D__UVISION_VERSION="542" -DSTM32F427xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F427xx-o eng_2025_1/referee_ui_task.o -MMD)
+F (..\ENG\UI\Referee_UI_Task.c)(0x688D530E)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O3 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../ENG/Inc -I ../ENG/Src -I ../ENG/UI -I ../Middlewares/ST/ARM/DSP/Lib -I ../Middlewares/ST/ARM/DSP/Inc -I ../USB_DEVICE/App -I ../USB_DEVICE/Target -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc-I./RTE/_ENG_2025_1-ID:/keil/pack/ARM/CMSIS/6.1.0/CMSIS/Core/Include-D__UVISION_VERSION="542" -DSTM32F427xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F427xx-o eng_2025_1/referee_ui_task.o -MMD)
 I (..\ENG\Inc\Includes.h)(0x686A6AAC)
 I (..\Core\Inc\main.h)(0x682339B9)
 I (..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal.h)(0x680B4800)
@@ -2752,10 +2806,10 @@ I (..\ENG\Inc\struct_typedef.h)(0x682339B9)
 I (..\ENG\Inc\crc8_crc16.h)(0x682339B9)
 I (..\ENG\Inc\crc.h)(0x682339B9)
 I (..\ENG\Inc\protocol.h)(0x68260215)
-I (..\ENG\UI\ui.h)(0x6835F531)
+I (..\ENG\UI\ui.h)(0x6886FFFD)
 I (..\ENG\UI\ui_interface.h)(0x6835F83A)
 I (..\ENG\UI\ui_types.h)(0x6835F531)
-I (..\ENG\UI\ui_g.h)(0x6835F531)
+I (..\ENG\UI\ui_g.h)(0x6886FF50)
 I (..\USB_DEVICE\App\usbd_cdc_if.h)(0x682339B9)
 I (..\Middlewares\ST\STM32_USB_Device_Library\Class\CDC\Inc\usbd_cdc.h)(0x680B4801)
 I (..\Middlewares\ST\STM32_USB_Device_Library\Core\Inc\usbd_ioreq.h)(0x680B4801)
@@ -2773,16 +2827,16 @@ I (..\ENG\Inc\moto.h)(0x682339B9)
 I (..\ENG\Inc\MTMotoDriver.h)(0x686B8013)
 I (..\ENG\Inc\PID.h)(0x682339B9)
 I (..\ENG\Inc\bsp_can.h)(0x682339B9)
-I (..\ENG\Inc\bsp_uart.h)(0x686A6EBB)
-I (..\ENG\Inc\modes.h)(0x68373155)
+I (..\ENG\Inc\bsp_uart.h)(0x6880D988)
+I (..\ENG\Inc\modes.h)(0x687CB682)
 I (..\ENG\Inc\RcDriver.h)(0x682339B9)
 I (..\ENG\Inc\Key.h)(0x682339B9)
 I (..\ENG\Inc\chassis.h)(0x682339B9)
-I (..\ENG\Inc\referee.h)(0x68348A3D)
+I (..\ENG\Inc\referee.h)(0x68878E48)
 I (..\ENG\Inc\wd.h)(0x682339B9)
 I (..\ENG\Inc\lift_moto_ctrl.h)(0x6875C967)
 I (..\ENG\Inc\Arm_Whole_Ctrl.h)(0x682339B9)
-I (..\ENG\Inc\relay.h)(0x682339B9)
+I (..\ENG\Inc\relay.h)(0x6880DA88)
 I (..\ENG\Inc\SelfCheck_Task.h)(0x682339B9)
 F (..\ENG\UI\ui_types.h)(0x6835F531)()
 F (..\ENG\UI\ui_interface.c)(0x6835F531)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O3 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../ENG/Inc -I ../ENG/Src -I ../ENG/UI -I ../Middlewares/ST/ARM/DSP/Lib -I ../Middlewares/ST/ARM/DSP/Inc -I ../USB_DEVICE/App -I ../USB_DEVICE/Target -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc-I./RTE/_ENG_2025_1-ID:/keil/pack/ARM/CMSIS/6.1.0/CMSIS/Core/Include-D__UVISION_VERSION="542" -DSTM32F427xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F427xx-o eng_2025_1/ui_interface.o -MMD)
@@ -2840,8 +2894,8 @@ I (..\ENG\Inc\struct_typedef.h)(0x682339B9)
 I (..\ENG\Inc\crc8_crc16.h)(0x682339B9)
 I (..\ENG\Inc\crc.h)(0x682339B9)
 I (..\ENG\Inc\protocol.h)(0x68260215)
-I (..\ENG\UI\ui.h)(0x6835F531)
-I (..\ENG\UI\ui_g.h)(0x6835F531)
+I (..\ENG\UI\ui.h)(0x6886FFFD)
+I (..\ENG\UI\ui_g.h)(0x6886FF50)
 I (..\USB_DEVICE\App\usbd_cdc_if.h)(0x682339B9)
 I (..\Middlewares\ST\STM32_USB_Device_Library\Class\CDC\Inc\usbd_cdc.h)(0x680B4801)
 I (..\Middlewares\ST\STM32_USB_Device_Library\Core\Inc\usbd_ioreq.h)(0x680B4801)
@@ -2859,18 +2913,18 @@ I (..\ENG\Inc\moto.h)(0x682339B9)
 I (..\ENG\Inc\MTMotoDriver.h)(0x686B8013)
 I (..\ENG\Inc\PID.h)(0x682339B9)
 I (..\ENG\Inc\bsp_can.h)(0x682339B9)
-I (..\ENG\Inc\bsp_uart.h)(0x686A6EBB)
-I (..\ENG\Inc\modes.h)(0x68373155)
+I (..\ENG\Inc\bsp_uart.h)(0x6880D988)
+I (..\ENG\Inc\modes.h)(0x687CB682)
 I (..\ENG\Inc\RcDriver.h)(0x682339B9)
 I (..\ENG\Inc\Key.h)(0x682339B9)
 I (..\ENG\Inc\chassis.h)(0x682339B9)
-I (..\ENG\Inc\referee.h)(0x68348A3D)
+I (..\ENG\Inc\referee.h)(0x68878E48)
 I (..\ENG\Inc\wd.h)(0x682339B9)
 I (..\ENG\Inc\lift_moto_ctrl.h)(0x6875C967)
 I (..\ENG\Inc\Arm_Whole_Ctrl.h)(0x682339B9)
-I (..\ENG\Inc\relay.h)(0x682339B9)
+I (..\ENG\Inc\relay.h)(0x6880DA88)
 I (..\ENG\Inc\SelfCheck_Task.h)(0x682339B9)
-F (..\ENG\UI\ui_g.c)(0x683BE632)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O3 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../ENG/Inc -I ../ENG/Src -I ../ENG/UI -I ../Middlewares/ST/ARM/DSP/Lib -I ../Middlewares/ST/ARM/DSP/Inc -I ../USB_DEVICE/App -I ../USB_DEVICE/Target -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc-I./RTE/_ENG_2025_1-ID:/keil/pack/ARM/CMSIS/6.1.0/CMSIS/Core/Include-D__UVISION_VERSION="542" -DSTM32F427xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F427xx-o eng_2025_1/ui_g.o -MMD)
+F (..\ENG\UI\ui_g.c)(0x68870148)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O3 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../ENG/Inc -I ../ENG/Src -I ../ENG/UI -I ../Middlewares/ST/ARM/DSP/Lib -I ../Middlewares/ST/ARM/DSP/Inc -I ../USB_DEVICE/App -I ../USB_DEVICE/Target -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc-I./RTE/_ENG_2025_1-ID:/keil/pack/ARM/CMSIS/6.1.0/CMSIS/Core/Include-D__UVISION_VERSION="542" -DSTM32F427xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F427xx-o eng_2025_1/ui_g.o -MMD)
 I (..\ENG\UI\ui_interface.h)(0x6835F83A)
 I (..\ENG\UI\ui_types.h)(0x6835F531)
 I (..\ENG\Inc\Includes.h)(0x686A6AAC)
@@ -2925,8 +2979,8 @@ I (..\ENG\Inc\struct_typedef.h)(0x682339B9)
 I (..\ENG\Inc\crc8_crc16.h)(0x682339B9)
 I (..\ENG\Inc\crc.h)(0x682339B9)
 I (..\ENG\Inc\protocol.h)(0x68260215)
-I (..\ENG\UI\ui.h)(0x6835F531)
-I (..\ENG\UI\ui_g.h)(0x6835F531)
+I (..\ENG\UI\ui.h)(0x6886FFFD)
+I (..\ENG\UI\ui_g.h)(0x6886FF50)
 I (..\USB_DEVICE\App\usbd_cdc_if.h)(0x682339B9)
 I (..\Middlewares\ST\STM32_USB_Device_Library\Class\CDC\Inc\usbd_cdc.h)(0x680B4801)
 I (..\Middlewares\ST\STM32_USB_Device_Library\Core\Inc\usbd_ioreq.h)(0x680B4801)
@@ -2944,16 +2998,16 @@ I (..\ENG\Inc\moto.h)(0x682339B9)
 I (..\ENG\Inc\MTMotoDriver.h)(0x686B8013)
 I (..\ENG\Inc\PID.h)(0x682339B9)
 I (..\ENG\Inc\bsp_can.h)(0x682339B9)
-I (..\ENG\Inc\bsp_uart.h)(0x686A6EBB)
-I (..\ENG\Inc\modes.h)(0x68373155)
+I (..\ENG\Inc\bsp_uart.h)(0x6880D988)
+I (..\ENG\Inc\modes.h)(0x687CB682)
 I (..\ENG\Inc\RcDriver.h)(0x682339B9)
 I (..\ENG\Inc\Key.h)(0x682339B9)
 I (..\ENG\Inc\chassis.h)(0x682339B9)
-I (..\ENG\Inc\referee.h)(0x68348A3D)
+I (..\ENG\Inc\referee.h)(0x68878E48)
 I (..\ENG\Inc\wd.h)(0x682339B9)
 I (..\ENG\Inc\lift_moto_ctrl.h)(0x6875C967)
 I (..\ENG\Inc\Arm_Whole_Ctrl.h)(0x682339B9)
-I (..\ENG\Inc\relay.h)(0x682339B9)
+I (..\ENG\Inc\relay.h)(0x6880DA88)
 I (..\ENG\Inc\SelfCheck_Task.h)(0x682339B9)
 F (../USB_DEVICE/App/usb_device.c)(0x682339B9)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O3 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -Wno-covered-switch-default -Wno-unreachable-code-break -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../ENG/Inc -I ../ENG/Src -I ../ENG/UI -I ../Middlewares/ST/ARM/DSP/Lib -I ../Middlewares/ST/ARM/DSP/Inc -I ../USB_DEVICE/App -I ../USB_DEVICE/Target -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc-I./RTE/_ENG_2025_1-ID:/keil/pack/ARM/CMSIS/6.1.0/CMSIS/Core/Include-D__UVISION_VERSION="542" -DSTM32F427xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F427xx-o eng_2025_1/usb_device.o -MMD)
 I (..\USB_DEVICE\App\usb_device.h)(0x682339B9)
@@ -3090,10 +3144,10 @@ I (..\ENG\Inc\struct_typedef.h)(0x682339B9)
 I (..\ENG\Inc\crc8_crc16.h)(0x682339B9)
 I (..\ENG\Inc\crc.h)(0x682339B9)
 I (..\ENG\Inc\protocol.h)(0x68260215)
-I (..\ENG\UI\ui.h)(0x6835F531)
+I (..\ENG\UI\ui.h)(0x6886FFFD)
 I (..\ENG\UI\ui_interface.h)(0x6835F83A)
 I (..\ENG\UI\ui_types.h)(0x6835F531)
-I (..\ENG\UI\ui_g.h)(0x6835F531)
+I (..\ENG\UI\ui_g.h)(0x6886FF50)
 I (..\USB_DEVICE\App\usbd_desc.h)(0x682339B9)
 I (..\USB_DEVICE\App\usb_device.h)(0x682339B9)
 I (..\ENG\Inc\robot_message.h)(0x682F1B17)
@@ -3104,16 +3158,16 @@ I (..\ENG\Inc\moto.h)(0x682339B9)
 I (..\ENG\Inc\MTMotoDriver.h)(0x686B8013)
 I (..\ENG\Inc\PID.h)(0x682339B9)
 I (..\ENG\Inc\bsp_can.h)(0x682339B9)
-I (..\ENG\Inc\bsp_uart.h)(0x686A6EBB)
-I (..\ENG\Inc\modes.h)(0x68373155)
+I (..\ENG\Inc\bsp_uart.h)(0x6880D988)
+I (..\ENG\Inc\modes.h)(0x687CB682)
 I (..\ENG\Inc\RcDriver.h)(0x682339B9)
 I (..\ENG\Inc\Key.h)(0x682339B9)
 I (..\ENG\Inc\chassis.h)(0x682339B9)
-I (..\ENG\Inc\referee.h)(0x68348A3D)
+I (..\ENG\Inc\referee.h)(0x68878E48)
 I (..\ENG\Inc\wd.h)(0x682339B9)
 I (..\ENG\Inc\lift_moto_ctrl.h)(0x6875C967)
 I (..\ENG\Inc\Arm_Whole_Ctrl.h)(0x682339B9)
-I (..\ENG\Inc\relay.h)(0x682339B9)
+I (..\ENG\Inc\relay.h)(0x6880DA88)
 I (..\ENG\Inc\SelfCheck_Task.h)(0x682339B9)
 F (../USB_DEVICE/Target/usbd_conf.c)(0x682339B9)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O3 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -Wno-covered-switch-default -Wno-unreachable-code-break -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../ENG/Inc -I ../ENG/Src -I ../ENG/UI -I ../Middlewares/ST/ARM/DSP/Lib -I ../Middlewares/ST/ARM/DSP/Inc -I ../USB_DEVICE/App -I ../USB_DEVICE/Target -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc-I./RTE/_ENG_2025_1-ID:/keil/pack/ARM/CMSIS/6.1.0/CMSIS/Core/Include-D__UVISION_VERSION="542" -DSTM32F427xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F427xx-o eng_2025_1/usbd_conf.o -MMD)
 I (..\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h)(0x680B4800)

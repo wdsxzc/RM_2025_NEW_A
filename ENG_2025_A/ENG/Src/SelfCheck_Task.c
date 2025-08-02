@@ -17,6 +17,9 @@ UART_REF									 12 //常规链路，UART通信方式
 
 #include "SelfCheck_Task.h"
 
+uint16_t int_var1;
+uint16_t int_var2;
+
 extern uint8_t Break_While_ctrl;
 extern uint8_t ShiJue_mode_ctrl;
 uint8_t t_shijue_reset = 4;
@@ -28,8 +31,7 @@ extern uint8_t camera_lift_reset_flag;
 extern uint8_t arm_lift_reset_flag;
 extern uint16_t camera_pitch;
 extern uint16_t camera_yaw;
-uint16_t t_ts1;
-uint16_t t_ts2;
+uint16_t t_ts = 1;
 
 
 void SelfCheck_mode(void const *argument)
@@ -37,7 +39,8 @@ void SelfCheck_mode(void const *argument)
 	osDelay(350);
 	while(1)
 	{
-		
+		int_var1 = TIM4->CCR1;
+		int_var2 = TIM4->CCR2;
 		//卡住跳出
 		if((Key_Check_Hold(&Keys.KEY_CTRL) && Key_Check_Hold(&Keys.KEY_Q))) Break_While_ctrl = 1;
 		
@@ -74,7 +77,7 @@ void SelfCheck_mode(void const *argument)
 			NVIC_SystemReset();
 		}
 		
-		if((Key_Check_Hold(&Keys.KEY_W))&&(Key_Check_Hold(&Keys.KEY_CTRL))&&(Key_Check_Hold(&Keys.KEY_SHIFT)))
+		if((Key_Check_Hold(&Keys.KEY_W))&&(Key_Check_Hold(&Keys.KEY_CTRL))&&(Key_Check_Hold(&Keys.KEY_SHIFT) == 0))
 		{
 			camera_lift_reset_flag = true;
 			arm_lift_reset_flag = true;
@@ -89,15 +92,41 @@ void SelfCheck_mode(void const *argument)
 		{
 			CAMERA_LIFT = CAMERA_LIFT + 600;
 		}
-		if (t_ts1 == 1) 
-		{
-			HAL_GPIO_WritePin(GPIOH,GPIO_PIN_2,GPIO_PIN_SET);
-		}
-		else
+		if(((Key_Check_Hold(&Keys.KEY_R))&&(Key_Check_Hold(&Keys.KEY_E)))||(t_ts))
 		{
 			HAL_GPIO_WritePin(GPIOH,GPIO_PIN_2,GPIO_PIN_RESET);
+			osDelay(200);
+			HAL_GPIO_WritePin(GPIOH,GPIO_PIN_2,GPIO_PIN_SET);
+			t_ts = 0;
 		}
-		
-		osDelay(2);
+		if((Key_Check_Hold(&Keys.KEY_D))&&(Key_Check_Hold(&Keys.KEY_CTRL))&&(Key_Check_Hold(&Keys.KEY_SHIFT)))
+		{
+			int_var1++;
+			if(int_var1>2450) int_var1 = 2450;
+			if(int_var1<550) int_var1 = 550;
+			CAMERA_YAW = int_var1;
+		}
+		if((Key_Check_Hold(&Keys.KEY_A))&&(Key_Check_Hold(&Keys.KEY_CTRL))&&(Key_Check_Hold(&Keys.KEY_SHIFT)))
+		{
+			int_var1--;
+			if(int_var1>2450) int_var1 = 2450;
+			if(int_var1<550) int_var1 = 550;
+			CAMERA_YAW = int_var1;
+		}
+		if((Key_Check_Hold(&Keys.KEY_S))&&(Key_Check_Hold(&Keys.KEY_CTRL))&&(Key_Check_Hold(&Keys.KEY_SHIFT)))
+		{
+			int_var2++;
+			if(int_var2>2450) int_var2 = 2450;
+			if(int_var2<1500) int_var2 = 1500;
+			CAMERA_PITCH = int_var2;
+		}
+		if((Key_Check_Hold(&Keys.KEY_W))&&(Key_Check_Hold(&Keys.KEY_CTRL))&&(Key_Check_Hold(&Keys.KEY_SHIFT)))
+		{
+			int_var2--;
+			if(int_var2>2450) int_var2 = 2450;
+			if(int_var2<1500) int_var2 = 1500;
+			CAMERA_PITCH = int_var2;
+		}
+		osDelay(10);
 	}
 }

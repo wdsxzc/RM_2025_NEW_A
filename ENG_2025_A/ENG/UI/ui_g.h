@@ -10,6 +10,7 @@
 
 extern ui_interface_line_t *ui_g_1_qianzuo;
 extern ui_interface_line_t *ui_g_1_qianyou;
+extern ui_interface_line_t *ui_g_1_jingjie;
 
 void ui_init_g_1();
 void ui_update_g_1();
@@ -22,19 +23,18 @@ void ui_init_g_2();
 void ui_update_g_2();
 void ui_remove_g_2();
 
-extern ui_interface_line_t *ui_g_3_yinqian;
-extern ui_interface_line_t *ui_g_3_yinzuo;
-extern ui_interface_line_t *ui_g_3_yinyou;
-
-void ui_init_g_3();
-void ui_update_g_3();
-void ui_remove_g_3();
-
 extern ui_interface_round_t *ui_g_4_gk;
 
 void ui_init_g_4();
 void ui_update_g_4();
 void ui_remove_g_4();
+
+extern ui_interface_line_t *ui_g_Ungroup_gjleft;
+extern ui_interface_line_t *ui_g_Ungroup_gjright;
+
+void ui_init_g_Ungroup();
+void ui_update_g_Ungroup();
+void ui_remove_g_Ungroup();
 
 extern ui_interface_round_t *ui_g_again_again;
 

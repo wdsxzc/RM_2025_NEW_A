@@ -10,8 +10,10 @@ extern bool lift_inited;
 extern bool camera_lift_inited;
 extern PidTD camera_pid_lift_reset_spd;
 extern int16_t lift_moto_current_set[2];
+extern frame_t frame;
 
 int16_t chassis_speed_coefficient = 1;
+float chassis_speed_slow = 0.6f;
 
 void MotoTask(void const *argument)
 {
@@ -75,7 +77,7 @@ void chassis_control_RC(void)
 //	else if(RC_CtrlData.rc.sw1 == 3) chassis_speed_coefficient = 1;
 //	else if(RC_CtrlData.rc.sw1 == 3) chassis_speed_coefficient = 1;
 	
-	if(Yaw_Flag == CAMERA_YAW_FORWARD)
+	if(Yaw_Flag == CAMERA_YAW_FORWARD && frame.data.mode != 2)
 	{
 		moto_chassis[0].speed_desired = (-vy + vx + vr) * chassis_speed_coefficient; // 1  right front
 		moto_chassis[1].speed_desired = (vy + vx + vr) * chassis_speed_coefficient;  // 2  left front
@@ -92,6 +94,14 @@ void chassis_control_RC(void)
 		moto_chassis[1].speed_desired = (vy + vx + vr) * chassis_speed_coefficient;  // 2  left front
 		moto_chassis[2].speed_desired = (vy - vx + vr) * chassis_speed_coefficient;  // 3	left back
 		moto_chassis[3].speed_desired = (-vy - vx + vr) * chassis_speed_coefficient; // 4	right back
+	}
+	
+	else if(Yaw_Flag == CAMERA_YAW_FORWARD && frame.data.mode == 2) 
+	{
+		moto_chassis[0].speed_desired = (-vy + vx + vr) * chassis_speed_slow; // 1  right front
+		moto_chassis[1].speed_desired = (vy + vx + vr) * chassis_speed_slow;  // 2  left front
+		moto_chassis[2].speed_desired = (vy - vx + vr) * chassis_speed_slow;  // 3	left back
+		moto_chassis[3].speed_desired = (-vy - vx + vr) * chassis_speed_slow; // 4	right back
 	}
 }
 

@@ -11,18 +11,18 @@ extern uint8_t t_pumg_last;
 
 void ui_task(void const* argument)
 {
-	ui_self_id = 102;
+	ui_self_id = 2;
 	ui_init_g_1();
 	vTaskDelay(100);
 	ui_init_g_1();
 	vTaskDelay(100);
 	ui_init_g_1();
 	vTaskDelay(100);
-	ui_init_g_3();
+	ui_init_g_Ungroup();
 	vTaskDelay(100);
-	ui_init_g_3();
+	ui_init_g_Ungroup();
 	vTaskDelay(100);
-	ui_init_g_3();
+	ui_init_g_Ungroup();
 	vTaskDelay(100);
 	ui_init_g_4();
 	vTaskDelay(100);
