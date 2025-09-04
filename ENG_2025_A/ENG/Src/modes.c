@@ -65,12 +65,13 @@ void ModeTask(void const *argument)
 		if((RC_CtrlData.rc.sw2 == 3)&&(t_r == 0))
 		{
 			t_r = 1;
-			sync_data_to_c.data.yaw1   = -10.0f;
-			sync_data_to_c.data.pitch1 = -19.0f;
-			sync_data_to_c.data.yaw2   = -18.0f;
-			sync_data_to_c.data.roll1  = -180.0f;
-			sync_data_to_c.data.pitch2 = 90.0f;
-			sync_data_to_c.data.roll2  = 0.0f;
+			YAW1   = -90.0f;
+			YAW2   = -30.0f;
+			ROLL1  = -145.0f;
+			PITCH2 = 90.0f;
+			ROLL2 += 0;			
+			PITCH1 = -7.0f;
+			LIFT = -100000;
 		}
 
         if (RC_CtrlData.rc.sw1 == 3) 
